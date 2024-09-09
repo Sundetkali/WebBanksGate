@@ -1,0 +1,30 @@
+﻿@using System.Web.Mvc
+@using Kendo.Mvc.UI
+@using Nat.Web.Core.Resources
+@using Nat.Web.Core.System.ViewModelAnnotations
+@model bool?
+
+
+@{
+    var attr = ViewData.ModelMetadata.ContainerType
+        .GetProperty(ViewData.ModelMetadata.PropertyName)
+        .GetCustomAttributes(typeof(DisplayExtendedAttribute), false)
+        .OfType<DisplayExtendedAttribute>()
+        .FirstOrDefault();
+}
+@(Html.Kendo().DropDownListFor(m => m)
+.BindTo(new List<SelectListItem>()
+{
+    new SelectListItem()
+    {
+        Value = "true",
+        Text = attr != null ? attr.GetBooleanTextTrue() : SharedResources.SYes
+    },
+    new SelectListItem()
+    {
+        Value = "false",
+        Text = attr != null ? attr.GetBooleanTextFalse() : SharedResources.SNo
+    }
+})
+.ValuePrimitive(true)
+.OptionLabel(SharedResources.SNotSelected))

@@ -1,0 +1,59 @@
+﻿@using System.Collections
+@using Dictionaries.Areas.DIC.GeneratedResources
+@using BanksGateDataModel.Models
+@using Dictionaries.Areas.DIC.ViewModels
+@using Nat.Web.Core.Kendo.Extensions
+@using Nat.Web.Core.Kendo.ViewModels
+@using Nat.Web.Core.System.ViewModels
+@using Kendo.Mvc.UI
+@using Kendo.Mvc.UI.Fluent
+
+@model Nat.Web.Core.System.ViewModels.GridViewModel
+@{
+    ViewData["Title"] = bookForDataResources.bookForData__Title;
+    WidgetFactory<GridViewModel> kendo = Html.Kendo();
+    if (Model.EmptyLayout)
+    {
+        Layout = (Model.Route?.Deferred ?? false) ? "~/Views/Shared/_DeferredNoLayout.cshtml" : null;
+    }
+    else
+    {
+        Layout = "~/Views/Shared/_Layout.cshtml";
+    }
+}
+
+@(kendo.StandardGrid<bookForDataViewModel>(Model)
+    .Columns(columns =>
+        {
+            if (Model?.Route?.GridCheckboxSelection ?? false)
+                columns.Select().Width(35).Locked(false);
+
+            var allowDestroy = Model.Destroy?.UserIsInAnyRole(kendo.HtmlHelper.ViewContext.HttpContext) ?? false;
+            var allowUpdate = Model.Update?.UserIsInAnyRole(kendo.HtmlHelper.ViewContext.HttpContext) ?? false;
+            if (allowDestroy || allowUpdate)
+            {
+                columns.Command(command =>
+                    {
+                        command.View();
+                        if (allowUpdate) command.Edit();
+                        if (allowDestroy) command.Destroy();
+                    }).Width(115).Locked(false);
+            }
+            columns.Bound(r => r.REFmsgQueId)
+                .HeaderHtmlAttributes(new { title = Dictionaries.Areas.DIC.GeneratedResources.bookForDataResources.REFmsgQueId__Title, style = "white-space:normal" })
+                .Visible(true);
+            columns.ForeignKey(r => r.REFid)
+                .HeaderHtmlAttributes(new { title = Dictionaries.Areas.DIC.GeneratedResources.bookForDataResources.REFid__Title, style = "white-space:normal" })
+                .Visible(true);
+            columns.Bound(r => r.stmpBody)
+                .HeaderHtmlAttributes(new { title = Dictionaries.Areas.DIC.GeneratedResources.bookForDataResources.stmpBody__Title, style = "white-space:normal" })
+                .Visible(true);
+            columns.Bound(r => r.stmpDataType)
+                .HeaderHtmlAttributes(new { title = Dictionaries.Areas.DIC.GeneratedResources.bookForDataResources.stmpDataType__Title, style = "white-space:normal" })
+                .Visible(true);
+            columns.Bound(r => r.REFrxcId)
+                .HeaderHtmlAttributes(new { title = Dictionaries.Areas.DIC.GeneratedResources.bookForDataResources.REFrxcId__Title, style = "white-space:normal" })
+                .Visible(true);
+        })
+    .HtmlAttributes(new { @class = "grid-h-100P" })
+    .Deferred(Model.Route?.Deferred ?? !Model.EmptyLayout))

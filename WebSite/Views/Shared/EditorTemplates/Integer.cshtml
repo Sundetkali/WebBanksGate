@@ -1,0 +1,14 @@
+@using System.ComponentModel.DataAnnotations
+@model int?
+@{
+    var attr = ViewData.ModelMetadata.ContainerType.GetProperty(ViewData.ModelMetadata.PropertyName)
+        .GetCustomAttributes(typeof(RangeAttribute), false)
+        .OfType<RangeAttribute>()
+        .FirstOrDefault();
+}
+
+@(Html.Kendo().IntegerTextBoxFor(m => m)
+      .HtmlAttributes(new { style = "width:100%" })
+      .Min(attr == null ? Int32.MinValue : Convert.ToInt32(attr.Minimum))
+      .Max(attr == null ? Int32.MaxValue : Convert.ToInt32(attr.Maximum))
+)

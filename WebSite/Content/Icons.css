@@ -1,0 +1,37 @@
+﻿.citybank-logo {
+    background-image: url(Logo/logo.png);
+    height: 32px;
+    width: 47px;
+}
+.k-menu .k-sprite.citybank-logo {
+    margin: -7px 4px -4px 4px;
+}
+
+.citybank-logo-18 {
+    background-image: url(Logo/logo-18.png);
+    height: 18px;
+    width: 22px;
+    margin-left: -5px !important;
+}
+
+.k-state-default .citybank-logo,
+.k-state-highlight .citybank-logo,
+.k-state-selected .citybank-logo {
+    background-position-x: -47px;
+}
+
+.k-state-highlight.k-state-default .citybank-logo,
+.k-state-hover.k-state-selected .citybank-logo,
+.k-state-hover.k-state-default .citybank-logo {
+    background-position-x: -0px;
+}
+
+#homeMenu2 {
+    font-weight: bold;
+}
+
+.citybank-template-logo {
+    background-image: url(Logo/citi_white_template.png);
+    height: 118px;
+    width: 140px;
+}

@@ -1,0 +1,7 @@
+﻿@using Nat.Web.Core.System.Annotations
+@using Nat.Web.Core.System.Extensions
+@model object 
+@{
+    var title = ViewData.ModelMetadata.GetPropertyAttr<TitleAttribute>()?.GetTitle() ?? ViewData.ModelMetadata.DisplayName;
+}
+@Html.TextArea("", new { @class = "k-textbox m-multilineString m-field-readOnly", style = "width:100%;", rows = 6, @readonly = "readonly", title })

@@ -1,0 +1,14 @@
+@using Nat.Web.Core.Kendo.Extensions
+@using Nat.Web.Core.Resources
+@using Nat.Web.Core.System.ViewModelAnnotations
+@model bool?
+@{
+    var attr = ViewData.ModelMetadata.ContainerType
+        .GetProperty(ViewData.ModelMetadata.PropertyName)
+        .GetCustomAttributes(typeof(DisplayExtendedAttribute), false)
+        .OfType<DisplayExtendedAttribute>()
+        .FirstOrDefault();
+}
+
+@(Html.Kendo().RadioButtonFor(m => m).Value("true").Label(attr?.GetBooleanTextTrue() ?? SharedResources.SYes))
+@(Html.Kendo().RadioButtonFor(m => m).Value("false").Label(attr?.GetBooleanTextFalse() ?? SharedResources.SNo))

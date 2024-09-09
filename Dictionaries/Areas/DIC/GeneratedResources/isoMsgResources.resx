@@ -1,0 +1,321 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="isoMsg__Title" xml:space="preserve">
+    <value>Сообщение</value>
+  </data>
+  <data name="isoMsg__Comment" xml:space="preserve">
+    <value>Сообщение</value>
+  </data>
+  <data name="isoMsg__DescriptionRtf" xml:space="preserve">
+    <value />
+  </data>
+  <data name="id__Title" xml:space="preserve">
+    <value>msgId</value>
+  </data>
+  <data name="id__Comment" xml:space="preserve">
+    <value>msgId</value>
+  </data>
+  <data name="REFusrId__Title" xml:space="preserve">
+    <value>Владелец</value>
+  </data>
+  <data name="REFusrId__Comment" xml:space="preserve">
+    <value>Владелец</value>
+  </data>
+  <data name="parentMsgId__Title" xml:space="preserve">
+    <value>parentMsgId</value>
+  </data>
+  <data name="parentMsgId__Comment" xml:space="preserve">
+    <value>parentMsgId</value>
+  </data>
+  <data name="bizId__Title" xml:space="preserve">
+    <value>bizMSGId</value>
+  </data>
+  <data name="bizId__Comment" xml:space="preserve">
+    <value>bizMSGId</value>
+  </data>
+  <data name="grpMsgId__Title" xml:space="preserve">
+    <value>grpMsgId</value>
+  </data>
+  <data name="grpMsgId__Comment" xml:space="preserve">
+    <value>grpMsgId</value>
+  </data>
+  <data name="msgPurpose__Title" xml:space="preserve">
+    <value>Тип платежа</value>
+  </data>
+  <data name="msgPurpose__Comment" xml:space="preserve">
+    <value>Тип платежа</value>
+  </data>
+  <data name="msgDir__Title" xml:space="preserve">
+    <value>Направление</value>
+  </data>
+  <data name="msgDir__Comment" xml:space="preserve">
+    <value>Направление</value>
+  </data>
+  <data name="msgType__Title" xml:space="preserve">
+    <value>Тип МХ</value>
+  </data>
+  <data name="msgType__Comment" xml:space="preserve">
+    <value>Тип МХ</value>
+  </data>
+  <data name="msgTypeVer__Title" xml:space="preserve">
+    <value>msgTypeVer</value>
+  </data>
+  <data name="msgTypeVer__Comment" xml:space="preserve">
+    <value>msgTypeVer</value>
+  </data>
+  <data name="msgError__Title" xml:space="preserve">
+    <value>msgError</value>
+  </data>
+  <data name="msgError__Comment" xml:space="preserve">
+    <value>msgError</value>
+  </data>
+  <data name="state__Title" xml:space="preserve">
+    <value>state</value>
+  </data>
+  <data name="state__Comment" xml:space="preserve">
+    <value>state</value>
+  </data>
+  <data name="sysDate__Title" xml:space="preserve">
+    <value>Системная дата импорта</value>
+  </data>
+  <data name="sysDate__Comment" xml:space="preserve">
+    <value>Системная дата импорта</value>
+  </data>
+  <data name="sysTm__Title" xml:space="preserve">
+    <value>Системное время импорта</value>
+  </data>
+  <data name="sysTm__Comment" xml:space="preserve">
+    <value>Системное время импорта</value>
+  </data>
+  <data name="sender__Title" xml:space="preserve">
+    <value>sender</value>
+  </data>
+  <data name="sender__Comment" xml:space="preserve">
+    <value>sender</value>
+  </data>
+  <data name="addressee__Title" xml:space="preserve">
+    <value>addressee</value>
+  </data>
+  <data name="addressee__Comment" xml:space="preserve">
+    <value>addressee</value>
+  </data>
+  <data name="rootTag__Title" xml:space="preserve">
+    <value>rootTag</value>
+  </data>
+  <data name="rootTag__Comment" xml:space="preserve">
+    <value>rootTag</value>
+  </data>
+  <data name="stmp__Title" xml:space="preserve">
+    <value>stmp</value>
+  </data>
+  <data name="stmp__Comment" xml:space="preserve">
+    <value>stmp</value>
+  </data>
+  <data name="stmpApp__Title" xml:space="preserve">
+    <value>Источник</value>
+  </data>
+  <data name="stmpApp__Comment" xml:space="preserve">
+    <value>Источник</value>
+  </data>
+  <data name="sprtry__Title" xml:space="preserve">
+    <value>sprtry</value>
+  </data>
+  <data name="sprtry__Comment" xml:space="preserve">
+    <value>sprtry</value>
+  </data>
+  <data name="aprtry__Title" xml:space="preserve">
+    <value>aprtry</value>
+  </data>
+  <data name="aprtry__Comment" xml:space="preserve">
+    <value>aprtry</value>
+  </data>
+  <data name="mprty__Title" xml:space="preserve">
+    <value>mprty</value>
+  </data>
+  <data name="mprty__Comment" xml:space="preserve">
+    <value>mprty</value>
+  </data>
+  <data name="mdate__Title" xml:space="preserve">
+    <value>mdate</value>
+  </data>
+  <data name="mdate__Comment" xml:space="preserve">
+    <value>mdate</value>
+  </data>
+  <data name="swtMsg__Title" xml:space="preserve">
+    <value>swtMsg</value>
+  </data>
+  <data name="swtMsg__Comment" xml:space="preserve">
+    <value>swtMsg</value>
+  </data>
+  <data name="isVolpay__Title" xml:space="preserve">
+    <value>isVolpay</value>
+  </data>
+  <data name="isVolpay__Comment" xml:space="preserve">
+    <value>isVolpay</value>
+  </data>
+  <data name="isVolpay__TrueText" xml:space="preserve">
+    <value>Да</value>
+  </data>
+  <data name="isVolpay__FalseText" xml:space="preserve">
+    <value>Нет</value>
+  </data>
+  <data name="msgAmount__Title" xml:space="preserve">
+    <value>msgAmount</value>
+  </data>
+  <data name="msgAmount__Comment" xml:space="preserve">
+    <value>msgAmount</value>
+  </data>
+  <data name="msgTerminal__Title" xml:space="preserve">
+    <value>Платежная система</value>
+  </data>
+  <data name="msgTerminal__Comment" xml:space="preserve">
+    <value>Платежная система</value>
+  </data>
+  <data name="rsPrt__Title" xml:space="preserve">
+    <value>rsPrt</value>
+  </data>
+  <data name="rsPrt__Comment" xml:space="preserve">
+    <value>rsPrt</value>
+  </data>
+  <data name="oprDate__Title" xml:space="preserve">
+    <value>oprDate</value>
+  </data>
+  <data name="oprDate__Comment" xml:space="preserve">
+    <value>oprDate</value>
+  </data>
+  <data name="msgComment__Title" xml:space="preserve">
+    <value>msgComment</value>
+  </data>
+  <data name="msgComment__Comment" xml:space="preserve">
+    <value>msgComment</value>
+  </data>
+  <data name="isoMsg__VMTitle" xml:space="preserve">
+    <value>Сообщение</value>
+  </data>
+  <data name="isoMsg__VMComment" xml:space="preserve">
+    <value>Сообщение</value>
+  </data>
+  <data name="isoMsgMinimal__VMTitle" xml:space="preserve">
+    <value>Сообщение</value>
+  </data>
+  <data name="isoMsgMinimal__VMComment" xml:space="preserve">
+    <value>Сообщение</value>
+  </data>
+</root>

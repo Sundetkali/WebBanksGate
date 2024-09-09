@@ -1,0 +1,47 @@
+﻿@using System.Collections
+@using TaxInterface_TI.Areas.TI.GeneratedResources
+@using BanksGateDataModel.Models
+@using TaxInterface_TI.Areas.TI.ViewModels
+@using Nat.Web.Core.Kendo.Extensions
+@using Nat.Web.Core.Kendo.ViewModels
+@using Nat.Web.Core.System.ViewModels
+@using Kendo.Mvc.UI
+@using Kendo.Mvc.UI.Fluent
+
+@model Nat.Web.Core.System.ViewModels.GridViewModel
+@{
+    ViewData["Title"] = TaxPaymentsResources.TaxPayments__Title;
+    WidgetFactory<GridViewModel> kendo = Html.Kendo();
+    if (Model.EmptyLayout)
+    {
+        Layout = (Model.Route?.Deferred ?? false) ? "~/Views/Shared/_DeferredNoLayout.cshtml" : null;
+    }
+    else
+    {
+        Layout = "~/Views/Shared/_Layout.cshtml";
+    }
+}
+
+@(kendo.StandardGrid<TaxPaymentsViewModel>(Model)
+    .Columns(columns =>
+        {
+            if (Model?.Route?.GridCheckboxSelection ?? false)
+                columns.Select().Width(35).Locked(false);
+
+            var allowDestroy = Model.Destroy?.UserIsInAnyRole(kendo.HtmlHelper.ViewContext.HttpContext) ?? false;
+            var allowUpdate = Model.Update?.UserIsInAnyRole(kendo.HtmlHelper.ViewContext.HttpContext) ?? false;
+            if (allowDestroy || allowUpdate)
+            {
+                columns.Command(command =>
+                    {
+                        command.View();
+                        if (allowUpdate) command.Edit();
+                        if (allowDestroy) command.Destroy();
+                    }).Width(115).Locked(false);
+            }
+            columns.Bound(r => r.Name)
+                .HeaderHtmlAttributes(new { title = TaxInterface_TI.Areas.TI.GeneratedResources.TaxPaymentsResources.Name__Title, style = "white-space:normal" })
+                .Visible(true);
+        })
+    .HtmlAttributes(new { @class = "grid-h-100P" })
+    .Deferred(Model.Route?.Deferred ?? !Model.EmptyLayout))

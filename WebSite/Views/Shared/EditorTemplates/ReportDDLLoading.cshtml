@@ -1,0 +1,33 @@
+﻿@using System
+@using System.Linq
+@using Nat.Web.Core.Resources
+@using Kendo.Mvc.UI
+@using Kendo.Mvc.UI.Fluent
+@using Nat.Web.Core.Kendo.Extensions
+@using Nat.Web.Core.System.Annotations
+@using Nat.Web.Core.System.Extensions
+@using Newtonsoft.Json
+@model object
+@{
+    WidgetFactory<Object> kendo = Html.Kendo();
+    var settings = ViewData.ModelMetadata.GetPropertyAttr<ForeignKeyAttribute>();
+    var title = ViewData.ModelMetadata.GetPropertyAttr<TitleAttribute>()?.Title ?? "";
+    var json = settings.GetOptionsJson(ViewData);
+    var dropdown = kendo.DropDownListFor(m => m)
+        .ValuePrimitive(true)
+        .OptionLabel(SharedResources.SNotSelected)
+        .Delay(750)
+        .MinLength(1)
+        .AutoBind(false)
+        .Filter(FilterType.ContainsAny);
+}
+
+@(dropdown
+    .InitForeignKey(settings, json)
+    .DataSource(ds => ds.InitForeignKey(settings, json)
+        .ServerFiltering(true)
+        .ServerPaging(true)
+        .PageSize(20))
+    .HtmlAttributes(new { style = "width:80%; width:calc(100% - 29px)", title, data_bind = "value: DynamicValue, visible: VisibleDynamicValue" })
+    .ToClientTemplate())
+<a id="@(ViewData.TemplateInfo.GetFullHtmlFieldName(""))_link" class="m-linkSelectForCombobox k-button" href="javascript:void(0)" onclick="Nat.F.OnOpenSelectDialogClick(this, @json);"><span class="fas fa-share-square fa-flip-horizontal"></span></a>

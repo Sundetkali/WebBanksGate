@@ -1,0 +1,100 @@
+﻿@using System.Collections
+@using Dictionaries.Areas.DIC.GeneratedResources
+@using BanksGateDataModel.Models
+@using Dictionaries.Areas.DIC.ViewModels
+@using Nat.Web.Core.Kendo.Extensions
+@using Nat.Web.Core.Kendo.ViewModels
+@using Nat.Web.Core.System.ViewModels
+@using Kendo.Mvc.UI
+@using Kendo.Mvc.UI.Fluent
+
+@model Nat.Web.Core.System.ViewModels.GridViewModel
+@{
+    ViewData["Title"] = MT950_TBLResources.MT950_TBL__Title;
+    WidgetFactory<GridViewModel> kendo = Html.Kendo();
+    if (Model.EmptyLayout)
+    {
+        Layout = (Model.Route?.Deferred ?? false) ? "~/Views/Shared/_DeferredNoLayout.cshtml" : null;
+    }
+    else
+    {
+        Layout = "~/Views/Shared/_Layout.cshtml";
+    }
+}
+
+@(kendo.StandardGrid<MT950_TBLViewModel>(Model)
+    .Columns(columns =>
+        {
+            if (Model?.Route?.GridCheckboxSelection ?? false)
+                columns.Select().Width(35).Locked(false);
+
+            var allowDestroy = Model.Destroy?.UserIsInAnyRole(kendo.HtmlHelper.ViewContext.HttpContext) ?? false;
+            var allowUpdate = Model.Update?.UserIsInAnyRole(kendo.HtmlHelper.ViewContext.HttpContext) ?? false;
+            if (allowDestroy || allowUpdate)
+            {
+                columns.Command(command =>
+                    {
+                        command.View();
+                        if (allowUpdate) command.Edit();
+                        if (allowDestroy) command.Destroy();
+                    }).Width(115).Locked(false);
+            }
+            columns.Bound(r => r.REFERENSE)
+                .HeaderHtmlAttributes(new { title = Dictionaries.Areas.DIC.GeneratedResources.MT950_TBLResources.REFERENSE__Title, style = "white-space:normal" })
+                .Visible(true);
+            columns.Bound(r => r.BIC)
+                .Visible(true);
+            columns.Bound(r => r.ACCOUNT)
+                .HeaderHtmlAttributes(new { title = Dictionaries.Areas.DIC.GeneratedResources.MT950_TBLResources.ACCOUNT__Title, style = "white-space:normal" })
+                .Visible(true);
+            columns.Bound(r => r.FNUM)
+                .HeaderHtmlAttributes(new { title = Dictionaries.Areas.DIC.GeneratedResources.MT950_TBLResources.FNUM__Title, style = "white-space:normal" })
+                .Visible(true);
+            columns.Bound(r => r.FCOUNT)
+                .HeaderHtmlAttributes(new { title = Dictionaries.Areas.DIC.GeneratedResources.MT950_TBLResources.FCOUNT__Title, style = "white-space:normal" })
+                .Visible(true);
+            columns.Bound(r => r.FSTART)
+                .HeaderHtmlAttributes(new { title = Dictionaries.Areas.DIC.GeneratedResources.MT950_TBLResources.FSTART__Title, style = "white-space:normal" })
+                .Visible(true);
+            columns.Bound(r => r.OPER_A)
+                .HeaderHtmlAttributes(new { title = Dictionaries.Areas.DIC.GeneratedResources.MT950_TBLResources.OPER_A__Title, style = "white-space:normal" })
+                .Visible(true);
+            columns.Bound(r => r.DATE_A)
+                .HeaderHtmlAttributes(new { title = Dictionaries.Areas.DIC.GeneratedResources.MT950_TBLResources.DATE_A__Title, style = "white-space:normal" })
+                .Visible(true);
+            columns.Bound(r => r.CODE_A)
+                .HeaderHtmlAttributes(new { title = Dictionaries.Areas.DIC.GeneratedResources.MT950_TBLResources.CODE_A__Title, style = "white-space:normal" })
+                .Visible(true);
+            columns.Bound(r => r.AMOUNT_A)
+                .HeaderHtmlAttributes(new { title = Dictionaries.Areas.DIC.GeneratedResources.MT950_TBLResources.AMOUNT_A__Title, style = "white-space:normal" })
+                .Visible(true);
+            columns.Bound(r => r.FEND)
+                .HeaderHtmlAttributes(new { title = Dictionaries.Areas.DIC.GeneratedResources.MT950_TBLResources.FEND__Title, style = "white-space:normal" })
+                .Visible(true);
+            columns.Bound(r => r.OPER_C)
+                .HeaderHtmlAttributes(new { title = Dictionaries.Areas.DIC.GeneratedResources.MT950_TBLResources.OPER_C__Title, style = "white-space:normal" })
+                .Visible(true);
+            columns.Bound(r => r.DATE_C)
+                .HeaderHtmlAttributes(new { title = Dictionaries.Areas.DIC.GeneratedResources.MT950_TBLResources.DATE_C__Title, style = "white-space:normal" })
+                .Visible(true);
+            columns.Bound(r => r.CODE_C)
+                .HeaderHtmlAttributes(new { title = Dictionaries.Areas.DIC.GeneratedResources.MT950_TBLResources.CODE_C__Title, style = "white-space:normal" })
+                .Visible(true);
+            columns.Bound(r => r.AMOUNT_C)
+                .HeaderHtmlAttributes(new { title = Dictionaries.Areas.DIC.GeneratedResources.MT950_TBLResources.AMOUNT_C__Title, style = "white-space:normal" })
+                .Visible(true);
+            columns.Bound(r => r.FCODENAME)
+                .HeaderHtmlAttributes(new { title = Dictionaries.Areas.DIC.GeneratedResources.MT950_TBLResources.FCODENAME__Title, style = "white-space:normal" })
+                .Visible(true);
+            columns.Bound(r => r.ID_MESSAGE)
+                .HeaderHtmlAttributes(new { title = Dictionaries.Areas.DIC.GeneratedResources.MT950_TBLResources.ID_MESSAGE__Title, style = "white-space:normal" })
+                .Visible(true);
+            columns.Bound(r => r.FTYPE)
+                .HeaderHtmlAttributes(new { title = Dictionaries.Areas.DIC.GeneratedResources.MT950_TBLResources.FTYPE__Title, style = "white-space:normal" })
+                .Visible(true);
+            columns.Bound(r => r.FSYSTEM)
+                .HeaderHtmlAttributes(new { title = Dictionaries.Areas.DIC.GeneratedResources.MT950_TBLResources.FSYSTEM__Title, style = "white-space:normal" })
+                .Visible(true);
+        })
+    .HtmlAttributes(new { @class = "grid-h-100P" })
+    .Deferred(Model.Route?.Deferred ?? !Model.EmptyLayout))

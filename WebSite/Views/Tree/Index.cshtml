@@ -1,0 +1,49 @@
+﻿@model WebSite.ViewModels.TreeViewModel
+
+@{
+    ViewBag.Title = string.IsNullOrEmpty(Model.LayoutTitle) ? Model.Title : Model.LayoutTitle;
+}
+
+@if (!string.IsNullOrEmpty(Model.LayoutTitle))
+{
+    @section layoutHeader {
+        
+        <h6><span class="@Model.IconCss"></span>&nbsp;&nbsp;@Model.LayoutTitle</h6>
+        
+    }
+}
+
+@(Html.Kendo().Splitter()
+    .Name("treeSplitter")
+    .Orientation(SplitterOrientation.Horizontal)
+    .HtmlAttributes(new { style = "height: 100%;" })
+    .Panes(p =>
+        {
+            p.Add()
+                .HtmlAttributes(new { id = "treeLeftMenu" })
+                .Size("250px")
+                .Collapsible(!Model.HideTreeLeftMenu)
+                .Scrollable(false)
+                .Collapsed(Model.HideTreeLeftMenu)
+                .Content(@<text>@Html.Partial("TreeLeftMenu", Model)</text>);
+            p.Add()
+                .HtmlAttributes(new { id = "treeTabPane" })
+                .Scrollable(false)
+                .Content(@<text>@Html.Partial("TreeTabPane", Model)</text>);
+        })
+    .Deferred())
+
+@section css {
+    @Styles.Render("~/content/home-tree/bundle")
+}
+@section scripts{
+    @Scripts.Render("~/bundles/home-tree")
+    @if (!string.IsNullOrEmpty(Model.OpenId))
+    {
+        <script type="text/javascript">
+            kendo.syncReady(function() {
+                VM.treeLeftMenu.OpenById('@Model.OpenId', @Html.Raw(Model.OpenDataJson));
+            });
+        </script>
+    }
+}

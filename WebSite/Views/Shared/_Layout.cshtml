@@ -1,0 +1,68 @@
+﻿@using WebSite.Properties
+@using Nat.Web.Core.Kendo.Extensions
+<!DOCTYPE html>
+<html translate="no">
+<head>
+    @{
+        var culture = System.Globalization.CultureInfo.CurrentCulture.TwoLetterISOLanguageName;
+    }
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv='X-UA-Compatible' content='IE=edge' />
+    <title>@ViewBag.Title</title>
+    @Styles.Render("~/content/kendo/bundle")
+    @Styles.Render("~/content/css")
+    @Styles.Render("~/content/fontawesome/css/bundle")
+    @RenderSection("css", required: false)
+</head>
+<body class="fixedContent-Body">
+    @if (Request.QueryString["gridAutoSelectID"] == null && !((bool?)ViewBag.HideMainMenu ?? false))
+    {
+        <header>
+            @* @Html.Action("Menu", "Home", new { area = "", childredForId = (long?)ViewBag.refChildMenu, maxChildrenLevel = 2 }) *@
+        </header>
+    }
+
+    @if (IsSectionDefined("layoutHeader"))
+    {
+        <div class="k-header layoutHeader k-state-selected">
+            @RenderSection("layoutHeader", false)
+        </div>
+    }
+
+    <div class="fixedContent @(Request.QueryString["gridAutoSelectID"] != null || ((bool?)ViewBag.HideMainMenu ?? false) ? "selectionLayout" : "") @(IsSectionDefined("layoutHeader") ? "fixedContent-layoutHeader" : "")">
+        @RenderBody()
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/jqueryval")
+    @if (culture == "kk")
+    {
+        @Scripts.Render("~/bundles/kendo-kz")
+    }
+    else if (culture == "en")
+    {
+        @Scripts.Render("~/bundles/kendo-en")
+    }
+    else
+    {
+        @Scripts.Render("~/bundles/kendo-ru")
+    }
+    @Scripts.Render("~/bundles/mainscripts")
+    @Scripts.Render("~/bundles/LOG")
+    @Scripts.Render("~/bundles/NCALayer")
+    <script src="~/signalr/hubs"></script>
+    <script>
+        kendo.culture("@System.Globalization.CultureInfo.CurrentCulture.ToString()");
+        var currentCulture = '@culture.ToLower()';
+        window.CopyToClipboard = null;
+    </script>
+    @Html.Kendo().DeferredScripts()
+    @RenderSection("scripts", required: false)
+    @if (Request.QueryString["gridAutoSelectID"] != null)
+    {
+        @Scripts.Render("~/bundles/selectionScripts")
+    }
+</body>
+</html>

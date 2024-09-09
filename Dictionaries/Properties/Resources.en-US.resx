@@ -1,0 +1,362 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="ApproveCantError" xml:space="preserve">
+    <value>Unable to approve, the status of the record has changed, update the data on the page</value>
+  </data>
+  <data name="CalendarDateReject" xml:space="preserve">
+    <value>Reject</value>
+  </data>
+  <data name="CalendarDate_Approve" xml:space="preserve">
+    <value>Approve</value>
+  </data>
+  <data name="CalendarDate_ApproveConfirm" xml:space="preserve">
+    <value>Do you really want to approve?</value>
+  </data>
+  <data name="CalendarDate_RejectConfirm" xml:space="preserve">
+    <value>Do you really want to reject?</value>
+  </data>
+  <data name="RejectCantError" xml:space="preserve">
+    <value>It is impossible to reject, the status of the record has changed, update the data on the page</value>
+  </data>
+  <data name="BINMustBeUnique" xml:space="preserve">
+    <value>BIN/IIN must be unique, a record with such BIN/IIN already exists</value>
+  </data>
+  <data name="CalendarDate_NotifBody" xml:space="preserve">
+    <value>The calendar for date {0} has been modified by the user: {1}.
+For the change to take effect, go to the Calendar directory and confirm the change.
+</value>
+  </data>
+  <data name="CalendarDate_NotifSubject" xml:space="preserve">
+    <value>Add or change a calendar date</value>
+  </data>
+  <data name="ClientList_XLS_FilesOnly" xml:space="preserve">
+    <value>Only xls and xlsx files can be downloaded</value>
+  </data>
+  <data name="ClientSearchByBaseIdBinName" xml:space="preserve">
+    <value>Search is performed by BIN, BaseID, CC CN, customer name</value>
+  </data>
+  <data name="ClientsInPayment_Investigation" xml:space="preserve">
+    <value>Investigation</value>
+  </data>
+  <data name="ClientsInPayment_Link" xml:space="preserve">
+    <value>Attach</value>
+  </data>
+  <data name="ResetFilter" xml:space="preserve">
+    <value>Reset Filter</value>
+  </data>
+  <data name="RNNMustBeUnique" xml:space="preserve">
+    <value>TRN must be unique, record with such TRN already exists</value>
+  </data>
+  <data name="SClientsInContact_AdminMessages" xml:space="preserve">
+    <value>List of admin messages from CF</value>
+  </data>
+  <data name="SClientsInContact_ClientBankAccounts" xml:space="preserve">
+    <value>Customer Account List</value>
+  </data>
+  <data name="SClientsInContact_ClientData" xml:space="preserve">
+    <value>Customer data</value>
+  </data>
+  <data name="UNNB_XLS_FilesOnly" xml:space="preserve">
+    <value>Only xls and xlsx files can be downloaded</value>
+  </data>
+  <data name="UploadContactList" xml:space="preserve">
+    <value>Download "Customer contacts"</value>
+  </data>
+  <data name="UploadUNNB" xml:space="preserve">
+    <value>Download "Information on valid NB RK account numbers"</value>
+  </data>
+  <data name="ClientsData" xml:space="preserve">
+    <value>Customer data</value>
+  </data>
+  <data name="AdditionalClientInfo" xml:space="preserve">
+    <value>Additional Customer Information</value>
+  </data>
+  <data name="ClientSearchByClientForm" xml:space="preserve">
+    <value>Search by BIN, BaseID, customer name</value>
+  </data>
+  <data name="UploadClientsMppList" xml:space="preserve">
+    <value>Download "MPP by Client"</value>
+  </data>
+  <data name="UploadClientBankAccounts" xml:space="preserve">
+    <value>Download Customer Accounts</value>
+  </data>
+  <data name="UploadSignatories" xml:space="preserve">
+    <value>Download "Signatories"</value>
+  </data>
+  <data name="UploadExcel" xml:space="preserve">
+    <value>Import to Excel</value>
+  </data>
+  <data name="From" xml:space="preserve">
+    <value>from</value>
+  </data>
+  <data name="To" xml:space="preserve">
+    <value>by</value>
+  </data>
+  <data name="UnloadList" xml:space="preserve">
+    <value>Unload List</value>
+  </data>
+  <data name="ApproveMessage" xml:space="preserve">
+    <value>Do you really want to approve?</value>
+  </data>
+  <data name="UnapproveMessage" xml:space="preserve">
+    <value>Do you really want to reject?</value>
+  </data>
+  <data name="ToForm" xml:space="preserve">
+    <value>Create</value>
+  </data>
+  <data name="SendNotification" xml:space="preserve">
+    <value>Send Notification</value>
+  </data>
+  <data name="SendEmailMessageButton" xml:space="preserve">
+    <value>Send message to client</value>
+  </data>
+  <data name="SendMessageButton" xml:space="preserve">
+    <value>To send</value>
+  </data>
+  <data name="SendStatementToClient" xml:space="preserve">
+    <value>Send Notification</value>
+  </data>
+  <data name="SelectOutlookTemplate" xml:space="preserve">
+    <value>You must select an alert template</value>
+  </data>
+  <data name="EmailOnlyOneClient" xml:space="preserve">
+    <value>Only one client can send a message</value>
+  </data>
+  <data name="UnloadListError" xml:space="preserve">
+    <value>You must select a list to upload</value>
+  </data>
+  <data name="ErrorText" xml:space="preserve">
+    <value>An error occurred while processing the request, the details of the error are available to the administrator in the event log.</value>
+  </data>
+  <data name="SendSelectedSigners" xml:space="preserve">
+    <value>Are you sure you want to send {0} records?</value>
+  </data>
+  <data name="SelectSigners" xml:space="preserve">
+    <value>You must select the signatories</value>
+  </data>
+  <data name="EmailMessageSendedAlert" xml:space="preserve">
+    <value>&lt;p&gt;{0} clients have been selected. &lt;br/&gt; Delivered to: {1} &lt;br/&gt; Not Delivered: {2} &lt;/p&gt;</value>
+  </data>
+  <data name="SelectEditTemplate" xml:space="preserve">
+    <value>You must select a template</value>
+  </data>
+  <data name="SelectOneEditTemplate" xml:space="preserve">
+    <value>You must select one template</value>
+  </data>
+  <data name="UploadTemplate" xml:space="preserve">
+    <value>Download New Template</value>
+  </data>
+  <data name="CantFindTemplate" xml:space="preserve">
+    <value>Template could not be found</value>
+  </data>
+  <data name="Approve" xml:space="preserve">
+    <value>Approve</value>
+  </data>
+  <data name="UnApprove" xml:space="preserve">
+    <value>Reject</value>
+  </data>
+  <data name="EditManager" xml:space="preserve">
+    <value>Edit Managers</value>
+  </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="RequiredFieldValidationError" xml:space="preserve">
+    <value>The '{0}' field is required</value>
+  </data>
+  <data name="DownloadTemplate" xml:space="preserve">
+    <value>Download Template</value>
+  </data>
+  <data name="ClientFormLog" xml:space="preserve">
+    <value>Event Log</value>
+  </data>
+  <data name="Base" xml:space="preserve">
+    <value>BaseId</value>
+  </data>
+  <data name="ClientName" xml:space="preserve">
+    <value>Client</value>
+  </data>
+  <data name="EmailNotFound" xml:space="preserve">
+    <value>Missing customer email address</value>
+  </data>
+  <data name="ErrorSended" xml:space="preserve">
+    <value>Not sent, please contact your administrator</value>
+  </data>
+  <data name="Sended" xml:space="preserve">
+    <value>Sent</value>
+  </data>
+  <data name="Status" xml:space="preserve">
+    <value>Status</value>
+  </data>
+  <data name="SignersModuleAlert" xml:space="preserve">
+    <value>Notification Report</value>
+  </data>
+  <data name="BankAccounts" xml:space="preserve">
+    <value>Customers account</value>
+  </data>
+  <data name="ClientsContact" xml:space="preserve">
+    <value>Customer Contact</value>
+  </data>
+  <data name="ClientsMpp" xml:space="preserve">
+    <value>MPP for customer</value>
+  </data>
+  <data name="Edit" xml:space="preserve">
+    <value>Edit</value>
+  </data>
+  <data name="Signatories" xml:space="preserve">
+    <value>Signers</value>
+  </data>
+  <data name="CantConvertToXlsxUploadXslx" xml:space="preserve">
+    <value>Failed to convert from xls to xlsx, download file in xlsx format.</value>
+  </data>
+  <data name="Email" xml:space="preserve">
+    <value>Send the message for email</value>
+  </data>
+  <data name="FilterByQuasiPublicSectorFalse" xml:space="preserve">
+    <value>Show quasi-sector subjects</value>
+  </data>
+  <data name="FilterByQuasiPublicSectorTrue" xml:space="preserve">
+    <value>Quasi-public sector entity</value>
+  </data>
+  <data name="UploadOKED" xml:space="preserve">
+    <value>Loading the GCEA File</value>
+  </data>
+  <data name="UploadClientsExcel" xml:space="preserve">
+    <value>Upload 'Clients'</value>
+  </data>
+  <data name="UploadOKEDExcel" xml:space="preserve">
+    <value>Upload 'Client GCEA'</value>
+  </data>
+  <data name="CurrencyVolumeNotFound" xml:space="preserve">
+    <value>The actual validity period of the currency sales volume was not found. Please indicate the date in the reference</value>
+  </data>
+  <data name="FilterByGoodsPreCheckTrue" xml:space="preserve">
+    <value>Additional checking</value>
+  </data>
+  <data name="FilterByGoodsPreCheckFalse" xml:space="preserve">
+    <value>Show customers with goods pre-check</value>
+  </data>
+  <data name="ChooseAmlMessageCode" xml:space="preserve">
+    <value>Select the basis for sending the message to AML</value>
+  </data>
+  <data name="DiffRefsAlert" xml:space="preserve">
+    <value>Cannot send: Records for more than 1 customer have been selected!</value>
+  </data>
+</root>

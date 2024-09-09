@@ -1,0 +1,43 @@
+﻿@using WebSite.Properties
+@model dynamic
+
+@{
+    ViewBag.Title = Resources.SAccessDanied;
+    Layout = ViewBag.EmptyLayout ? null : "~/Views/Shared/_Layout.cshtml";
+}
+<style>
+    .errorText {
+        color: red;
+    }
+</style>
+@if (ViewBag.EmptyLayout)
+{
+    var id = "noAccessWindow" + DateTime.Now.Ticks;
+<div id="div_@id"></div>
+    <script>
+        var close@(id) = function(e) {
+            $('#div_@id').closest('.k-window-content').data('kendoWindow').close();
+            e.sender.close();
+            e.sender.destroy();
+        };
+    </script>
+    @(Html.Kendo().Dialog()
+        .Name(id)
+        .Closable(false)
+        .Width(500)
+        .Actions(a => a.Add().Primary(true).Text("OK").Action("close" + id))
+        .Content("<h2 class='errorText'>" + Resources.SAccessDanied + "</h2>"))
+}
+else
+{
+    @(Html.Kendo().Dialog()
+        .Name("accessWindow")
+        .Closable(false)
+        .Width(500)
+        .Actions(a =>
+        {
+            a.Add().Primary(true).Action("function() { window.location = '/'; }").Text("ОК");
+        })
+        .Content("<h2 class='errorText'>" + Resources.SAccessDanied + "</h2>")
+        .Deferred())
+}

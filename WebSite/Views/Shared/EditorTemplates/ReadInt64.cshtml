@@ -1,0 +1,12 @@
+@using System.ComponentModel.DataAnnotations
+@using Nat.Web.Core.System.Extensions
+@model Int64?
+@{
+    var format = ViewData.ModelMetadata.GetPropertyAttr<DisplayFormatAttribute>();
+}
+@(Html.Kendo().IntegerTextBoxFor(m => m)
+      .HtmlAttributes(new { style = "width:100%", @class="m-field-readOnly", @readonly = "readonly" })
+      .Format(format?.DataFormatString ?? "{0:N0}")
+      .Min(Int32.MinValue)
+      .Max(Int32.MaxValue)
+)

@@ -1,0 +1,11 @@
+@using Nat.Web.Core.Kendo.Extensions
+@model DateTime?
+
+@(Html.Kendo().DatePickerFor(m => m)
+      .Format("MM.yyyy")
+      .HtmlAttributes(new { data_format="MM.yyyy" })
+      .Start(CalendarView.Year)
+      .Depth(CalendarView.Year)
+      .DefaultMonthParseFormats()
+      .Events(e => e.Change("Nat.F.DateAlert"))
+      .Deferred((bool?) ViewBag.EditorTemplateDeferred ?? false))

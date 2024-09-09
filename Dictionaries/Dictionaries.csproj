@@ -1,0 +1,324 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.props" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{513D6E67-64CE-4149-9DB7-EDCE3C9CD5C3}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Dictionaries</RootNamespace>
+    <AssemblyName>Dictionaries</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\WebSite\bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\WebSite\bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Antlr3.Runtime, Version=3.5.0.2, Culture=neutral, PublicKeyToken=eb42632606e9261f, processorArchitecture=MSIL">
+      <HintPath>..\packages\Antlr.3.5.0.2\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="CodeFirstStoreFunctions, Version=1.2.0.0, Culture=neutral, PublicKeyToken=46c4868af4307d2c, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.CodeFirstStoreFunctions.1.2.0\lib\net45\CodeFirstStoreFunctions.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Hangfire.Core, Version=1.7.16.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Hangfire.Core.1.7.16\lib\net46\Hangfire.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Hangfire.SqlServer, Version=1.7.16.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Hangfire.SqlServer.1.7.16\lib\net45\Hangfire.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Kendo.Mvc, Version=2019.1.115.545, Culture=neutral, PublicKeyToken=55f6c56e6ab9709a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Nat.Web.Core.Kendo-UI.1.0.27\lib\net45\Kendo.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Core.2.2.3\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Owin, Version=4.1.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.4.1.1\lib\net45\Microsoft.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Host.SystemWeb, Version=4.1.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Host.SystemWeb.4.1.1\lib\net45\Microsoft.Owin.Host.SystemWeb.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="Nat.Web.Core.Controls, Version=1.0.0.0, Culture=neutral, PublicKeyToken=bc6873e23d24701a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Nat.Web.Core.Kendo.1.0.99\lib\net46\Nat.Web.Core.Controls.dll</HintPath>
+    </Reference>
+    <Reference Include="Nat.Web.Core.Kendo, Version=1.0.0.0, Culture=neutral, PublicKeyToken=bc6873e23d24701a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Nat.Web.Core.Kendo.1.0.99\lib\net46\Nat.Web.Core.Kendo.dll</HintPath>
+    </Reference>
+    <Reference Include="Nat.Web.Core.Res, Version=1.0.0.0, Culture=neutral, PublicKeyToken=bc6873e23d24701a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Nat.Web.Core.Kendo.1.0.99\lib\net46\Nat.Web.Core.Res.dll</HintPath>
+    </Reference>
+    <Reference Include="Nat.Web.Core.System, Version=1.0.0.0, Culture=neutral, PublicKeyToken=bc6873e23d24701a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Nat.Web.Core.Kendo.1.0.99\lib\net46\Nat.Web.Core.System.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Owin, Version=1.0.0.0, Culture=neutral, PublicKeyToken=f0ebd12fd5e55cc5, processorArchitecture=MSIL">
+      <HintPath>..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.7\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization, Version=1.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.7\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="WebGrease, Version=1.6.5135.21930, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\WebGrease.1.6.0\lib\WebGrease.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="..\website\scripts\CommonClasses.js">
+      <Link>Areas\DIC\Scripts\CommonClasses.js</Link>
+    </Content>
+    <Content Include="..\website\scripts\CommonFunctions.js">
+      <Link>Areas\DIC\Scripts\CommonFunctions.js</Link>
+    </Content>
+    <Content Include="..\website\scripts\ExtendKendo.js">
+      <Link>Areas\DIC\Scripts\ExtendKendo.js</Link>
+    </Content>
+    <Content Include="..\website\scripts\MainScripts.js">
+      <Link>Areas\DIC\Scripts\MainScripts.js</Link>
+    </Content>
+    <Content Include="Areas\DIC\Content\DIC.css" />
+    <Content Include="Areas\DIC\Scripts\BasicMakerChecker.js" />
+    <Content Include="Areas\DIC\Scripts\BankAccountTypes.js" />
+    <Content Include="Areas\DIC\Scripts\ClientBankAccountClassExceptions.js" />
+    <Content Include="Areas\DIC\Scripts\ClientBankAccounts.js" />
+    <Content Include="Areas\DIC\Scripts\ClientSendDataExceptions.js" />
+    <Content Include="Areas\DIC\Scripts\Countries.js" />
+    <Content Include="Areas\DIC\Scripts\EmailMessagesDialog.js" />
+    <Content Include="Areas\DIC\Scripts\EditTemplates.js" />
+    <Content Include="Areas\DIC\Scripts\MailingGroup.js" />
+    <Content Include="Areas\DIC\Scripts\ClientsMPP.js" />
+    <Content Include="Areas\DIC\Scripts\EKNPAccountTransactionCode.js" />
+    <Content Include="Areas\DIC\Scripts\ComplianceEKNPTreasurys.js" />
+    <Content Include="Areas\DIC\Scripts\ComplianceBankAccounts.js" />
+    <Content Include="Areas\DIC\Scripts\ClientsForm.js" />
+    <Content Include="Areas\DIC\Scripts\CitistoreTemplates.js" />
+    <Content Include="Areas\DIC\Scripts\StatementsTranslate.js" />
+    <Content Include="Areas\DIC\Scripts\SignatoriesTemplates.js" />
+    <Content Include="Areas\DIC\Scripts\Signatories.js" />
+    <Content Include="Areas\DIC\Scripts\ClientContacts.js" />
+    <Content Include="Areas\DIC\Scripts\Calendar.js" />
+    <Content Include="Areas\DIC\Scripts\ClientsSelection.js" />
+    <Content Include="Areas\DIC\Scripts\SignersModule.js" />
+    <Content Include="Areas\DIC\Scripts\EconomicTradeType.js" />
+    <Content Include="Areas\DIC\Scripts\UNNB.js" />
+    <Content Include="Areas\DIC\Scripts\OutlookTemplates.js" />
+    <Content Include="Areas\DIC\Scripts\ClientsAccountsInContracts.js" />
+    <Content Include="Areas\DIC\Scripts\Clients.js" />
+    <Content Include="Areas\DIC\Scripts\ClientsInContracts.js" />
+    <Content Include="Areas\DIC\Scripts\Main.js" />
+    <Content Include="Areas\DIC\Scripts\WeekendMaster.js" />
+    <Content Include="Areas\DIC\Views\BG_Payments\Index.cshtml" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Areas\DIC\DICAreaRegistration.cs" />
+    <Compile Include="Areas\DIC\GeneratedController.Kendo\BG_PaymentsController.cs" />
+    <Compile Include="Areas\DIC\GeneratedController.Kendo\bookForDataController.cs" />
+    <Compile Include="Areas\DIC\GeneratedController.Kendo\isoMsgController.cs" />
+    <Compile Include="Areas\DIC\GeneratedController.Kendo\isoPaymentController.cs" />
+    <Compile Include="Areas\DIC\GeneratedController.Kendo\MT100_TBLController.cs" />
+    <Compile Include="Areas\DIC\GeneratedController.Kendo\MT102_TBLController.cs" />
+    <Compile Include="Areas\DIC\GeneratedController.Kendo\MT950_TBLController.cs" />
+    <Compile Include="Areas\DIC\GeneratedController.Kendo\MT_Messages_TBLController.cs" />
+    <Compile Include="Areas\DIC\GeneratedDataAdapter\BG_PaymentsDataAdapter.cs" />
+    <Compile Include="Areas\DIC\GeneratedDataAdapter\bookForDataDataAdapter.cs" />
+    <Compile Include="Areas\DIC\GeneratedDataAdapter\isoMsgDataAdapter.cs" />
+    <Compile Include="Areas\DIC\GeneratedDataAdapter\isoPaymentDataAdapter.cs" />
+    <Compile Include="Areas\DIC\GeneratedDataAdapter\MT100_TBLDataAdapter.cs" />
+    <Compile Include="Areas\DIC\GeneratedDataAdapter\MT102_TBLDataAdapter.cs" />
+    <Compile Include="Areas\DIC\GeneratedDataAdapter\MT950_TBLDataAdapter.cs" />
+    <Compile Include="Areas\DIC\GeneratedDataAdapter\MT_Messages_TBLDataAdapter.cs" />
+    <Compile Include="Areas\DIC\GeneratedResources\BG_PaymentsResources.designer.cs" />
+    <Compile Include="Areas\DIC\GeneratedResources\bookForDataResources.designer.cs" />
+    <Compile Include="Areas\DIC\GeneratedResources\isoMsgResources.designer.cs" />
+    <Compile Include="Areas\DIC\GeneratedResources\isoPaymentResources.designer.cs" />
+    <Compile Include="Areas\DIC\GeneratedResources\MT100_TBLResources.designer.cs" />
+    <Compile Include="Areas\DIC\GeneratedResources\MT102_TBLResources.designer.cs" />
+    <Compile Include="Areas\DIC\GeneratedResources\MT950_TBLResources.designer.cs" />
+    <Compile Include="Areas\DIC\GeneratedResources\MT_Messages_TBLResources.designer.cs" />
+    <Compile Include="Areas\DIC\GeneratedViewModels\BG_PaymentsViewModel.cs" />
+    <Compile Include="Areas\DIC\GeneratedViewModels\bookForDataViewModel.cs" />
+    <Compile Include="Areas\DIC\GeneratedViewModels\isoMsgViewModel.cs" />
+    <Compile Include="Areas\DIC\GeneratedViewModels\isoPaymentViewModel.cs" />
+    <Compile Include="Areas\DIC\GeneratedViewModels\MT100_TBLViewModel.cs" />
+    <Compile Include="Areas\DIC\GeneratedViewModels\MT102_TBLViewModel.cs" />
+    <Compile Include="Areas\DIC\GeneratedViewModels\MT950_TBLViewModel.cs" />
+    <Compile Include="Areas\DIC\GeneratedViewModels\MT_Messages_TBLViewModel.cs" />
+    <Compile Include="Areas\DIC\SecurityPermissions.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Areas\DIC\Views\web.config" />
+    <Content Include="Areas\DIC\Content\web.config" />
+    <Content Include="Areas\DIC\Scripts\web.config" />
+    <Content Include="Areas\DIC\Views\bookForData\Index.cshtml" />
+    <Content Include="Areas\DIC\Views\isoMsg\Index.cshtml" />
+    <Content Include="Areas\DIC\Views\MT100_TBL\Index.cshtml" />
+    <Content Include="Areas\DIC\Views\MT102_TBL\Index.cshtml" />
+    <Content Include="Areas\DIC\Views\MT950_TBL\Index.cshtml" />
+    <Content Include="Areas\DIC\Views\MT_Messages_TBL\Index.cshtml" />
+    <None Include="packages.config" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Areas\DIC\GeneratedResources\BG_PaymentsResources.resx" />
+    <EmbeddedResource Include="Areas\DIC\GeneratedResources\bookForDataResources.resx" />
+    <EmbeddedResource Include="Areas\DIC\GeneratedResources\isoMsgResources.resx" />
+    <EmbeddedResource Include="Areas\DIC\GeneratedResources\isoPaymentResources.resx" />
+    <EmbeddedResource Include="Areas\DIC\GeneratedResources\MT100_TBLResources.resx" />
+    <EmbeddedResource Include="Areas\DIC\GeneratedResources\MT102_TBLResources.resx" />
+    <EmbeddedResource Include="Areas\DIC\GeneratedResources\MT950_TBLResources.resx" />
+    <EmbeddedResource Include="Areas\DIC\GeneratedResources\MT_Messages_TBLResources.resx" />
+    <EmbeddedResource Include="Properties\Resources.en-US.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.kk-KZ.resx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BanksGateDataModel\BanksGateDataModel.csproj">
+      <Project>{50391ad1-a40f-4345-b215-f552baadc853}</Project>
+      <Name>BanksGateDataModel</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Areas\DIC\Controllers\" />
+    <Folder Include="Areas\DIC\Extensions\" />
+    <Folder Include="Areas\DIC\ViewModels\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>60141</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:60141/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>Данный проект ссылается на пакеты NuGet, отсутствующие на этом компьютере. Используйте восстановление пакетов NuGet, чтобы скачать их.  Дополнительную информацию см. по адресу: http://go.microsoft.com/fwlink/?LinkID=322105. Отсутствует следующий файл: {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.targets'))" />
+  </Target>
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.targets" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

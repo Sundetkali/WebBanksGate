@@ -1,0 +1,15 @@
+@using System.ComponentModel.DataAnnotations
+@model long?
+@{
+    var attr = ViewData.ModelMetadata.ContainerType.GetProperty(ViewData.ModelMetadata.PropertyName)
+        .GetCustomAttributes(typeof(RangeAttribute), false)
+        .OfType<RangeAttribute>()
+        .FirstOrDefault();
+}
+
+@(Html.Kendo().IntegerTextBoxFor(m => m)
+      .HtmlAttributes(new { style = "width:100%" })
+      .Format(ViewData.ModelMetadata.DisplayFormatString)
+      .Min(attr == null ? Int64.MinValue : Convert.ToInt64(attr.Minimum))
+      .Max(attr == null ? Int64.MaxValue : Convert.ToInt64(attr.Maximum))
+)

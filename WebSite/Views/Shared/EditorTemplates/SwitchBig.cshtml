@@ -1,0 +1,11 @@
+@using System.Reflection
+@using Nat.Web.Core.Kendo.Extensions
+@using Nat.Web.Core.Resources
+@using Nat.Web.Core.System.Extensions
+@using Nat.Web.Core.System.ViewModelAnnotations
+@model bool?
+@{
+    var no = ViewData.ModelMetadata.GetPropertyAttr<DisplayExtendedAttribute>()?.GetBooleanTextFalse() ?? SharedResources.SNo;
+    var yes = ViewData.ModelMetadata.GetPropertyAttr<DisplayExtendedAttribute>()?.GetBooleanTextTrue() ?? SharedResources.SYes;
+}
+@(Html.Kendo().SwitchFor(m => m).Messages(m => m.Checked(yes).Unchecked(no)).Width("18em"))

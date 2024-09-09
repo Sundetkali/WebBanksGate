@@ -1,0 +1,46 @@
+﻿.calendar-holiday {
+    color: #D9261C;
+    font-weight: bold;
+}
+.calendar-rejected {
+    background: #f7dddc;
+}
+
+.calendar-rejected-holiday {
+    background: #f7dddc;
+    font-weight: bold;
+}
+.calendar-forApproveReject-holiday {
+    background: #FFC925;
+    font-weight: bold;
+}
+.calendar-forApproveReject {
+    background: #FFC925;
+}
+
+.k-content .k-month {
+    margin: 0 15px;
+}
+
+#multiViewCalendarJS .k-calendar-view,
+.mcc-multi-view-calendar .k-calendar-view{
+    white-space: normal;
+    max-width: 1050px;
+}
+
+#multiViewCalendarJS .k-month-header,
+.mcc-multi-view-calendar .k-month-header{
+    caption-side: top;
+    font-weight: bold;
+}
+
+.k-notification-warning {
+}
+
+.dic-client-closed {
+    color: #C40000;
+}
+
+.dic-client-closed.k-state-selected {
+    color: #F47373;
+}

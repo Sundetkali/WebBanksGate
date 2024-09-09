@@ -1,0 +1,44 @@
+﻿.m-field-readOnly.k-checkbox:checked {
+    color: #333;
+}
+.k-grid tr .k-button {
+    margin: -0.16em .16em;
+}
+
+
+.k-grid-toolbar .k-upload {
+    display: inline-block;
+    border-width: 0;
+    vertical-align: middle;
+}
+
+.k-grid-toolbar .k-dropzone {
+    padding: 0;
+}
+
+.k-grid tr.k-state-selected a.k-link {
+    color: white;
+}
+
+.k-grid-header th.k-header > .k-link {
+    max-height: 39px;
+}
+.k-menu.k-button {
+    background-color: #fff;
+}
+
+.k-grid td {
+    line-height: 1.1em;
+    font-size: 0.9em;
+}
+.k-grid-header th.k-header > .k-link {
+    line-height: 1.1em;
+}
+
+.k-edit-form-container .editor-label, .k-edit-label {
+    padding: .4em 0;
+}
+
+.k-menu .k-state-default .k-state-border-down.k-group {
+    background-color: white;
+}

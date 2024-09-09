@@ -1,0 +1,14 @@
+﻿@using Nat.Web.Core.Resources
+@model Nat.Web.Core.System.ViewModels.SearchToolbarDivViewModel
+
+<div class="m-searchToolbarDIV @Model.DivCss" style="@Model.DivStyle">
+    <input type='text' class='k-textbox m-searchToolbarInput' id='@Model.id' placeholder="@SharedResources.SQuickSearch" title="@SharedResources.SSearch"
+        @if (!string.IsNullOrEmpty(Model.BindField))
+        {
+            <text>
+ data-bind='value:@(Model.BindField)'
+            </text>
+        }
+ onkeypress='@(Model.ChangeHandler)(event)' value="@Model.DefaultValue" />
+    <a href='javascript:void(0)' onclick='@(Model.ChangeHandler)({keyCode:13}); return false;' class='m-searchToolbarLink' title="@SharedResources.SSearch"><span class='k-icon k-i-search'></span></a>
+</div>

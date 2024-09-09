@@ -1,0 +1,7 @@
+@using Nat.Web.Core.Kendo.Extensions
+@model DateTime?
+
+@(Html.Kendo().DateTimePickerFor(m => m)
+      .DefaultParseFormats()
+      .Events(e => e.Change("Nat.F.DateAlert"))
+      .Deferred((bool?) ViewBag.EditorTemplateDeferred ?? false))

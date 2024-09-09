@@ -1,0 +1,513 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="MT100_TBL__Title" xml:space="preserve">
+    <value>Сообщение - МТ100</value>
+  </data>
+  <data name="MT100_TBL__Comment" xml:space="preserve">
+    <value>Сообщение - МТ100</value>
+  </data>
+  <data name="MT100_TBL__DescriptionRtf" xml:space="preserve">
+    <value />
+  </data>
+  <data name="id__Title" xml:space="preserve">
+    <value>Иденитфикатор документа</value>
+  </data>
+  <data name="id__Comment" xml:space="preserve">
+    <value>Иденитфикатор документа</value>
+  </data>
+  <data name="ID_MESSAGE__Title" xml:space="preserve">
+    <value>Идентификатор собщение</value>
+  </data>
+  <data name="ID_MESSAGE__Comment" xml:space="preserve">
+    <value>Идентификатор собщение</value>
+  </data>
+  <data name="DOC_REFERENCE__Title" xml:space="preserve">
+    <value>Ссылка на документ</value>
+  </data>
+  <data name="DOC_REFERENCE__Comment" xml:space="preserve">
+    <value>Ссылка на документ</value>
+  </data>
+  <data name="DOC_PAYADD__Title" xml:space="preserve">
+    <value>DOC_PAYADD</value>
+  </data>
+  <data name="DOC_PAYADD__Comment" xml:space="preserve">
+    <value>DOC_PAYADD</value>
+  </data>
+  <data name="DOC_PAYCODE__Title" xml:space="preserve">
+    <value>DOC_PAYCODE</value>
+  </data>
+  <data name="DOC_PAYCODE__Comment" xml:space="preserve">
+    <value>DOC_PAYCODE</value>
+  </data>
+  <data name="DOC_OPERATION__Title" xml:space="preserve">
+    <value>Операция документа</value>
+  </data>
+  <data name="DOC_OPERATION__Comment" xml:space="preserve">
+    <value>Операция документа</value>
+  </data>
+  <data name="DOC_INITIATORACCOUNT__Title" xml:space="preserve">
+    <value>DOC_INITIATORACCOUNT</value>
+  </data>
+  <data name="DOC_INITIATORACCOUNT__Comment" xml:space="preserve">
+    <value>DOC_INITIATORACCOUNT</value>
+  </data>
+  <data name="DOC_INITIATORRNN__Title" xml:space="preserve">
+    <value>DOC_INITIATORRNN</value>
+  </data>
+  <data name="DOC_INITIATORRNN__Comment" xml:space="preserve">
+    <value>DOC_INITIATORRNN</value>
+  </data>
+  <data name="DOC_INITIATORCHIEF__Title" xml:space="preserve">
+    <value>DOC_INITIATORCHIEF</value>
+  </data>
+  <data name="DOC_INITIATORCHIEF__Comment" xml:space="preserve">
+    <value>DOC_INITIATORCHIEF</value>
+  </data>
+  <data name="DOC_INITIATORMAINBK__Title" xml:space="preserve">
+    <value>DOC_INITIATORMAINBK</value>
+  </data>
+  <data name="DOC_INITIATORMAINBK__Comment" xml:space="preserve">
+    <value>DOC_INITIATORMAINBK</value>
+  </data>
+  <data name="DOC_INITIATORNAME__Title" xml:space="preserve">
+    <value>DOC_INITIATORNAME</value>
+  </data>
+  <data name="DOC_INITIATORNAME__Comment" xml:space="preserve">
+    <value>DOC_INITIATORNAME</value>
+  </data>
+  <data name="DOC_INITIATORIRS__Title" xml:space="preserve">
+    <value>DOC_INITIATORIRS</value>
+  </data>
+  <data name="DOC_INITIATORIRS__Comment" xml:space="preserve">
+    <value>DOC_INITIATORIRS</value>
+  </data>
+  <data name="DOC_INITIATORSECO__Title" xml:space="preserve">
+    <value>DOC_INITIATORSECO</value>
+  </data>
+  <data name="DOC_INITIATORSECO__Comment" xml:space="preserve">
+    <value>DOC_INITIATORSECO</value>
+  </data>
+  <data name="DOC_INITIATORBNK__Title" xml:space="preserve">
+    <value>DOC_INITIATORBNK</value>
+  </data>
+  <data name="DOC_INITIATORBNK__Comment" xml:space="preserve">
+    <value>DOC_INITIATORBNK</value>
+  </data>
+  <data name="DOC_INITIATORCORRBBNK__Title" xml:space="preserve">
+    <value>DOC_INITIATORCORRBBNK</value>
+  </data>
+  <data name="DOC_INITIATORCORRBBNK__Comment" xml:space="preserve">
+    <value>DOC_INITIATORCORRBBNK</value>
+  </data>
+  <data name="DOC_INITIATORCORRACCOUNT__Title" xml:space="preserve">
+    <value>DOC_INITIATORCORRACCOUNT</value>
+  </data>
+  <data name="DOC_INITIATORCORRACCOUNT__Comment" xml:space="preserve">
+    <value>DOC_INITIATORCORRACCOUNT</value>
+  </data>
+  <data name="DOC_BENEFCORRRBNK__Title" xml:space="preserve">
+    <value>DOC_BENEFCORRRBNK</value>
+  </data>
+  <data name="DOC_BENEFCORRRBNK__Comment" xml:space="preserve">
+    <value>DOC_BENEFCORRRBNK</value>
+  </data>
+  <data name="DOC_BENEFCORRACCOUNT__Title" xml:space="preserve">
+    <value>DOC_BENEFCORRACCOUNT</value>
+  </data>
+  <data name="DOC_BENEFCORRACCOUNT__Comment" xml:space="preserve">
+    <value>DOC_BENEFCORRACCOUNT</value>
+  </data>
+  <data name="DOC_BENEFBNK__Title" xml:space="preserve">
+    <value>DOC_BENEFBNK</value>
+  </data>
+  <data name="DOC_BENEFBNK__Comment" xml:space="preserve">
+    <value>DOC_BENEFBNK</value>
+  </data>
+  <data name="DOC_BENEFACCOUNT__Title" xml:space="preserve">
+    <value>DOC_BENEFACCOUNT</value>
+  </data>
+  <data name="DOC_BENEFACCOUNT__Comment" xml:space="preserve">
+    <value>DOC_BENEFACCOUNT</value>
+  </data>
+  <data name="DOC_BENEFRNN__Title" xml:space="preserve">
+    <value>DOC_BENEFRNN</value>
+  </data>
+  <data name="DOC_BENEFRNN__Comment" xml:space="preserve">
+    <value>DOC_BENEFRNN</value>
+  </data>
+  <data name="DOC_BENEFNAME__Title" xml:space="preserve">
+    <value>DOC_BENEFNAME</value>
+  </data>
+  <data name="DOC_BENEFNAME__Comment" xml:space="preserve">
+    <value>DOC_BENEFNAME</value>
+  </data>
+  <data name="DOC_BENEFIRS__Title" xml:space="preserve">
+    <value>DOC_BENEFIRS</value>
+  </data>
+  <data name="DOC_BENEFIRS__Comment" xml:space="preserve">
+    <value>DOC_BENEFIRS</value>
+  </data>
+  <data name="DOC_BENEFSECO__Title" xml:space="preserve">
+    <value>DOC_BENEFSECO</value>
+  </data>
+  <data name="DOC_BENEFSECO__Comment" xml:space="preserve">
+    <value>DOC_BENEFSECO</value>
+  </data>
+  <data name="DOC_NUM__Title" xml:space="preserve">
+    <value>Номер документа</value>
+  </data>
+  <data name="DOC_NUM__Comment" xml:space="preserve">
+    <value>Номер документа</value>
+  </data>
+  <data name="DOC_DATE__Title" xml:space="preserve">
+    <value>Дата документа</value>
+  </data>
+  <data name="DOC_DATE__Comment" xml:space="preserve">
+    <value>Дата документа</value>
+  </data>
+  <data name="DOC_SEND__Title" xml:space="preserve">
+    <value>Отправить документ</value>
+  </data>
+  <data name="DOC_SEND__Comment" xml:space="preserve">
+    <value>Отправить документ</value>
+  </data>
+  <data name="DOC_VO__Title" xml:space="preserve">
+    <value>DOC_VO</value>
+  </data>
+  <data name="DOC_VO__Comment" xml:space="preserve">
+    <value>DOC_VO</value>
+  </data>
+  <data name="DOC_PSO__Title" xml:space="preserve">
+    <value>DOC_PSO</value>
+  </data>
+  <data name="DOC_PSO__Comment" xml:space="preserve">
+    <value>DOC_PSO</value>
+  </data>
+  <data name="DOC_KNP__Title" xml:space="preserve">
+    <value>DOC_KNP</value>
+  </data>
+  <data name="DOC_KNP__Comment" xml:space="preserve">
+    <value>DOC_KNP</value>
+  </data>
+  <data name="DOC_BCLASS__Title" xml:space="preserve">
+    <value>DOC_BCLASS</value>
+  </data>
+  <data name="DOC_BCLASS__Comment" xml:space="preserve">
+    <value>DOC_BCLASS</value>
+  </data>
+  <data name="DOC_PRT__Title" xml:space="preserve">
+    <value>DOC_PRT</value>
+  </data>
+  <data name="DOC_PRT__Comment" xml:space="preserve">
+    <value>DOC_PRT</value>
+  </data>
+  <data name="DOC_SIM__Title" xml:space="preserve">
+    <value>DOC_SIM</value>
+  </data>
+  <data name="DOC_SIM__Comment" xml:space="preserve">
+    <value>DOC_SIM</value>
+  </data>
+  <data name="DOC_ASSIGN__Title" xml:space="preserve">
+    <value>DOC_ASSIGN</value>
+  </data>
+  <data name="DOC_ASSIGN__Comment" xml:space="preserve">
+    <value>DOC_ASSIGN</value>
+  </data>
+  <data name="DOC_ADD__Title" xml:space="preserve">
+    <value>Добавить документ</value>
+  </data>
+  <data name="DOC_ADD__Comment" xml:space="preserve">
+    <value>Добавить документ</value>
+  </data>
+  <data name="DOC_PAYAMOUNT__Title" xml:space="preserve">
+    <value>DOC_PAYAMOUNT</value>
+  </data>
+  <data name="DOC_PAYAMOUNT__Comment" xml:space="preserve">
+    <value>DOC_PAYAMOUNT</value>
+  </data>
+  <data name="DOC_RELATIONREFERENSE__Title" xml:space="preserve">
+    <value>DOC_RELATIONREFERENSE</value>
+  </data>
+  <data name="DOC_RELATIONREFERENSE__Comment" xml:space="preserve">
+    <value>DOC_RELATIONREFERENSE</value>
+  </data>
+  <data name="DOC_PRINTED__Title" xml:space="preserve">
+    <value>DOC_PRINTED</value>
+  </data>
+  <data name="DOC_PRINTED__Comment" xml:space="preserve">
+    <value>DOC_PRINTED</value>
+  </data>
+  <data name="lfvalue__Title" xml:space="preserve">
+    <value>lfvalue</value>
+  </data>
+  <data name="lfvalue__Comment" xml:space="preserve">
+    <value>lfvalue</value>
+  </data>
+  <data name="PSTATE__Title" xml:space="preserve">
+    <value>PSTATE</value>
+  </data>
+  <data name="PSTATE__Comment" xml:space="preserve">
+    <value>PSTATE</value>
+  </data>
+  <data name="PSTATE__TrueText" xml:space="preserve">
+    <value>Да</value>
+  </data>
+  <data name="PSTATE__FalseText" xml:space="preserve">
+    <value>Нет</value>
+  </data>
+  <data name="DOC_INITIATORIDN__Title" xml:space="preserve">
+    <value>DOC_INITIATORIDN</value>
+  </data>
+  <data name="DOC_INITIATORIDN__Comment" xml:space="preserve">
+    <value>DOC_INITIATORIDN</value>
+  </data>
+  <data name="DOC_BENEFIDN__Title" xml:space="preserve">
+    <value>DOC_BENEFIDN</value>
+  </data>
+  <data name="DOC_BENEFIDN__Comment" xml:space="preserve">
+    <value>DOC_BENEFIDN</value>
+  </data>
+  <data name="COMMON_DOC_TYPE__Title" xml:space="preserve">
+    <value>COMMON_DOC_TYPE</value>
+  </data>
+  <data name="COMMON_DOC_TYPE__Comment" xml:space="preserve">
+    <value>COMMON_DOC_TYPE</value>
+  </data>
+  <data name="isENTERPRISEWAGE__Title" xml:space="preserve">
+    <value>isENTERPRISEWAGE</value>
+  </data>
+  <data name="isENTERPRISEWAGE__Comment" xml:space="preserve">
+    <value>isENTERPRISEWAGE</value>
+  </data>
+  <data name="paymentType__Title" xml:space="preserve">
+    <value>paymentType</value>
+  </data>
+  <data name="paymentType__Comment" xml:space="preserve">
+    <value>paymentType</value>
+  </data>
+  <data name="crossCurrencyCode__Title" xml:space="preserve">
+    <value>crossCurrencyCode</value>
+  </data>
+  <data name="crossCurrencyCode__Comment" xml:space="preserve">
+    <value>crossCurrencyCode</value>
+  </data>
+  <data name="crossCurrencyAmount__Title" xml:space="preserve">
+    <value>crossCurrencyAmount</value>
+  </data>
+  <data name="crossCurrencyAmount__Comment" xml:space="preserve">
+    <value>crossCurrencyAmount</value>
+  </data>
+  <data name="crossExchange__Title" xml:space="preserve">
+    <value>crossExchange</value>
+  </data>
+  <data name="crossExchange__Comment" xml:space="preserve">
+    <value>crossExchange</value>
+  </data>
+  <data name="crossSenderCountry__Title" xml:space="preserve">
+    <value>crossSenderCountry</value>
+  </data>
+  <data name="crossSenderCountry__Comment" xml:space="preserve">
+    <value>crossSenderCountry</value>
+  </data>
+  <data name="crossPayeeCountry__Title" xml:space="preserve">
+    <value>crossPayeeCountry</value>
+  </data>
+  <data name="crossPayeeCountry__Comment" xml:space="preserve">
+    <value>crossPayeeCountry</value>
+  </data>
+  <data name="crossChargeCost__Title" xml:space="preserve">
+    <value>crossChargeCost</value>
+  </data>
+  <data name="crossChargeCost__Comment" xml:space="preserve">
+    <value>crossChargeCost</value>
+  </data>
+  <data name="doc_type__Title" xml:space="preserve">
+    <value>doc_type</value>
+  </data>
+  <data name="doc_type__Comment" xml:space="preserve">
+    <value>doc_type</value>
+  </data>
+  <data name="operDate__Title" xml:space="preserve">
+    <value>operDate</value>
+  </data>
+  <data name="operDate__Comment" xml:space="preserve">
+    <value>operDate</value>
+  </data>
+  <data name="psstView__Title" xml:space="preserve">
+    <value>psstView</value>
+  </data>
+  <data name="psstView__Comment" xml:space="preserve">
+    <value>psstView</value>
+  </data>
+  <data name="senderPhone__Title" xml:space="preserve">
+    <value>senderPhone</value>
+  </data>
+  <data name="senderPhone__Comment" xml:space="preserve">
+    <value>senderPhone</value>
+  </data>
+  <data name="addresseePhone__Title" xml:space="preserve">
+    <value>addresseePhone</value>
+  </data>
+  <data name="addresseePhone__Comment" xml:space="preserve">
+    <value>addresseePhone</value>
+  </data>
+  <data name="payPriority__Title" xml:space="preserve">
+    <value>payPriority</value>
+  </data>
+  <data name="payPriority__Comment" xml:space="preserve">
+    <value>payPriority</value>
+  </data>
+  <data name="payPriority__TrueText" xml:space="preserve">
+    <value>Да</value>
+  </data>
+  <data name="payPriority__FalseText" xml:space="preserve">
+    <value>Нет</value>
+  </data>
+  <data name="isUseLimit__Title" xml:space="preserve">
+    <value>isUseLimit</value>
+  </data>
+  <data name="isUseLimit__Comment" xml:space="preserve">
+    <value>isUseLimit</value>
+  </data>
+  <data name="isUseLimit__TrueText" xml:space="preserve">
+    <value>Да</value>
+  </data>
+  <data name="isUseLimit__FalseText" xml:space="preserve">
+    <value>Нет</value>
+  </data>
+  <data name="REFlimitId__Title" xml:space="preserve">
+    <value>REFlimitId</value>
+  </data>
+  <data name="REFlimitId__Comment" xml:space="preserve">
+    <value>REFlimitId</value>
+  </data>
+  <data name="MT100_TBL__VMTitle" xml:space="preserve">
+    <value>Сообщение - МТ100</value>
+  </data>
+  <data name="MT100_TBL__VMComment" xml:space="preserve">
+    <value>Сообщение - МТ100</value>
+  </data>
+  <data name="MT100_TBLMinimal__VMTitle" xml:space="preserve">
+    <value>Сообщение - МТ100</value>
+  </data>
+  <data name="MT100_TBLMinimal__VMComment" xml:space="preserve">
+    <value>Сообщение - МТ100</value>
+  </data>
+</root>

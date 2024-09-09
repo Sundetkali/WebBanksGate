@@ -1,0 +1,47 @@
+﻿@using WebSite.Properties
+@using Nat.Web.Core.Kendo.Extensions
+<!DOCTYPE html>
+<html translate="no">
+<head>
+    @{
+        var culture = System.Globalization.CultureInfo.CurrentCulture.TwoLetterISOLanguageName;
+    }
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv='X-UA-Compatible' content='IE=edge' />
+    <title>@ViewBag.Title</title>
+    @Styles.Render("~/content/kendo/2018.1.322/bundle")
+    @Styles.Render("~/content/bundle")
+    @Styles.Render("~/content/fontawesome/css/bundle")
+    @RenderSection("css", required: false)
+</head>
+<body class="fixedContent-Body">
+    <div class="fixedContent selectionLayout">
+        @RenderBody()
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/jqueryval")
+    @if (culture == "kk")
+    {
+        @Scripts.Render("~/bundles/kendo-kz")
+    }
+    else if (culture == "en")
+    {
+        @Scripts.Render("~/bundles/kendo-en")
+    }
+    else
+    {
+        @Scripts.Render("~/bundles/kendo-ru")
+    }
+    @Scripts.Render("~/bundles/mainscripts")
+    <script>
+    kendo.culture("@System.Globalization.CultureInfo.CurrentCulture.ToString()");
+    var currentCulture = '@culture.ToLower()';
+    </script>
+    @Html.Kendo().DeferredScripts()
+    @RenderSection("scripts", required: false)
+    @Scripts.Render("~/bundles/selectionScripts")
+</body>
+</html>

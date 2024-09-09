@@ -1,0 +1,128 @@
+﻿@using System.Collections
+@using Dictionaries.Areas.DIC.GeneratedResources
+@using BanksGateDataModel.Models
+@using Dictionaries.Areas.DIC.ViewModels
+@using Nat.Web.Core.Kendo.Extensions
+@using Nat.Web.Core.Kendo.ViewModels
+@using Nat.Web.Core.System.ViewModels
+@using Kendo.Mvc.UI
+@using Kendo.Mvc.UI.Fluent
+
+@model Nat.Web.Core.System.ViewModels.GridViewModel
+@{
+    ViewData["Title"] = isoMsgResources.isoMsg__Title;
+    WidgetFactory<GridViewModel> kendo = Html.Kendo();
+    if (Model.EmptyLayout)
+    {
+        Layout = (Model.Route?.Deferred ?? false) ? "~/Views/Shared/_DeferredNoLayout.cshtml" : null;
+    }
+    else
+    {
+        Layout = "~/Views/Shared/_Layout.cshtml";
+    }
+}
+
+@(kendo.StandardGrid<isoMsgViewModel>(Model)
+    .Columns(columns =>
+        {
+            if (Model?.Route?.GridCheckboxSelection ?? false)
+                columns.Select().Width(35).Locked(false);
+
+            var allowDestroy = Model.Destroy?.UserIsInAnyRole(kendo.HtmlHelper.ViewContext.HttpContext) ?? false;
+            var allowUpdate = Model.Update?.UserIsInAnyRole(kendo.HtmlHelper.ViewContext.HttpContext) ?? false;
+            if (allowDestroy || allowUpdate)
+            {
+                columns.Command(command =>
+                    {
+                        command.View();
+                        if (allowUpdate) command.Edit();
+                        if (allowDestroy) command.Destroy();
+                    }).Width(115).Locked(false);
+            }
+            columns.Bound(r => r.REFusrId)
+                .HeaderHtmlAttributes(new { title = Dictionaries.Areas.DIC.GeneratedResources.isoMsgResources.REFusrId__Title, style = "white-space:normal" })
+                .Visible(true);
+            columns.Bound(r => r.parentMsgId)
+                .HeaderHtmlAttributes(new { title = Dictionaries.Areas.DIC.GeneratedResources.isoMsgResources.parentMsgId__Title, style = "white-space:normal" })
+                .Visible(true);
+            columns.Bound(r => r.bizId)
+                .HeaderHtmlAttributes(new { title = Dictionaries.Areas.DIC.GeneratedResources.isoMsgResources.bizId__Title, style = "white-space:normal" })
+                .Visible(true);
+            columns.Bound(r => r.grpMsgId)
+                .HeaderHtmlAttributes(new { title = Dictionaries.Areas.DIC.GeneratedResources.isoMsgResources.grpMsgId__Title, style = "white-space:normal" })
+                .Visible(true);
+            columns.Bound(r => r.msgPurpose)
+                .HeaderHtmlAttributes(new { title = Dictionaries.Areas.DIC.GeneratedResources.isoMsgResources.msgPurpose__Title, style = "white-space:normal" })
+                .Visible(true);
+            columns.Bound(r => r.msgDir)
+                .HeaderHtmlAttributes(new { title = Dictionaries.Areas.DIC.GeneratedResources.isoMsgResources.msgDir__Title, style = "white-space:normal" })
+                .Visible(true);
+            columns.Bound(r => r.msgType)
+                .HeaderHtmlAttributes(new { title = Dictionaries.Areas.DIC.GeneratedResources.isoMsgResources.msgType__Title, style = "white-space:normal" })
+                .Visible(true);
+            columns.Bound(r => r.msgTypeVer)
+                .HeaderHtmlAttributes(new { title = Dictionaries.Areas.DIC.GeneratedResources.isoMsgResources.msgTypeVer__Title, style = "white-space:normal" })
+                .Visible(true);
+            columns.Bound(r => r.msgError)
+                .HeaderHtmlAttributes(new { title = Dictionaries.Areas.DIC.GeneratedResources.isoMsgResources.msgError__Title, style = "white-space:normal" })
+                .Visible(true);
+            columns.Bound(r => r.state)
+                .HeaderHtmlAttributes(new { title = Dictionaries.Areas.DIC.GeneratedResources.isoMsgResources.state__Title, style = "white-space:normal" })
+                .Visible(true);
+            columns.Bound(r => r.sysDate)
+                .HeaderHtmlAttributes(new { title = Dictionaries.Areas.DIC.GeneratedResources.isoMsgResources.sysDate__Title, style = "white-space:normal" })
+                .Visible(true);
+            columns.Bound(r => r.sysTm)
+                .HeaderHtmlAttributes(new { title = Dictionaries.Areas.DIC.GeneratedResources.isoMsgResources.sysTm__Title, style = "white-space:normal" })
+                .Visible(true);
+            columns.Bound(r => r.sender)
+                .HeaderHtmlAttributes(new { title = Dictionaries.Areas.DIC.GeneratedResources.isoMsgResources.sender__Title, style = "white-space:normal" })
+                .Visible(true);
+            columns.Bound(r => r.addressee)
+                .HeaderHtmlAttributes(new { title = Dictionaries.Areas.DIC.GeneratedResources.isoMsgResources.addressee__Title, style = "white-space:normal" })
+                .Visible(true);
+            columns.Bound(r => r.rootTag)
+                .HeaderHtmlAttributes(new { title = Dictionaries.Areas.DIC.GeneratedResources.isoMsgResources.rootTag__Title, style = "white-space:normal" })
+                .Visible(true);
+            columns.Bound(r => r.stmp)
+                .HeaderHtmlAttributes(new { title = Dictionaries.Areas.DIC.GeneratedResources.isoMsgResources.stmp__Title, style = "white-space:normal" })
+                .Visible(true);
+            columns.Bound(r => r.stmpApp)
+                .HeaderHtmlAttributes(new { title = Dictionaries.Areas.DIC.GeneratedResources.isoMsgResources.stmpApp__Title, style = "white-space:normal" })
+                .Visible(true);
+            columns.Bound(r => r.sprtry)
+                .HeaderHtmlAttributes(new { title = Dictionaries.Areas.DIC.GeneratedResources.isoMsgResources.sprtry__Title, style = "white-space:normal" })
+                .Visible(true);
+            columns.Bound(r => r.aprtry)
+                .HeaderHtmlAttributes(new { title = Dictionaries.Areas.DIC.GeneratedResources.isoMsgResources.aprtry__Title, style = "white-space:normal" })
+                .Visible(true);
+            columns.Bound(r => r.mprty)
+                .HeaderHtmlAttributes(new { title = Dictionaries.Areas.DIC.GeneratedResources.isoMsgResources.mprty__Title, style = "white-space:normal" })
+                .Visible(true);
+            columns.Bound(r => r.mdate)
+                .HeaderHtmlAttributes(new { title = Dictionaries.Areas.DIC.GeneratedResources.isoMsgResources.mdate__Title, style = "white-space:normal" })
+                .Visible(true);
+            columns.Bound(r => r.swtMsg)
+                .HeaderHtmlAttributes(new { title = Dictionaries.Areas.DIC.GeneratedResources.isoMsgResources.swtMsg__Title, style = "white-space:normal" })
+                .Visible(true);
+            columns.BoundBool(r => r.isVolpay)
+                .HeaderHtmlAttributes(new { title = Dictionaries.Areas.DIC.GeneratedResources.isoMsgResources.isVolpay__Title, style = "white-space:normal" })
+                .Visible(true);
+            columns.Bound(r => r.msgAmount)
+                .HeaderHtmlAttributes(new { title = Dictionaries.Areas.DIC.GeneratedResources.isoMsgResources.msgAmount__Title, style = "white-space:normal" })
+                .Visible(true);
+            columns.Bound(r => r.msgTerminal)
+                .HeaderHtmlAttributes(new { title = Dictionaries.Areas.DIC.GeneratedResources.isoMsgResources.msgTerminal__Title, style = "white-space:normal" })
+                .Visible(true);
+            columns.Bound(r => r.rsPrt)
+                .HeaderHtmlAttributes(new { title = Dictionaries.Areas.DIC.GeneratedResources.isoMsgResources.rsPrt__Title, style = "white-space:normal" })
+                .Visible(true);
+            columns.Bound(r => r.oprDate)
+                .HeaderHtmlAttributes(new { title = Dictionaries.Areas.DIC.GeneratedResources.isoMsgResources.oprDate__Title, style = "white-space:normal" })
+                .Visible(true);
+            columns.Bound(r => r.msgComment)
+                .HeaderHtmlAttributes(new { title = Dictionaries.Areas.DIC.GeneratedResources.isoMsgResources.msgComment__Title, style = "white-space:normal" })
+                .Visible(true);
+        })
+    .HtmlAttributes(new { @class = "grid-h-100P" })
+    .Deferred(Model.Route?.Deferred ?? !Model.EmptyLayout))

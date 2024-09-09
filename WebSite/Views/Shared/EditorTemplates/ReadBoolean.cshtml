@@ -1,0 +1,6 @@
+@using Nat.Web.Core.Kendo.Extensions
+@model bool?
+
+@(Html.Kendo().CheckBoxFor(m => m).Label()
+    .Enable(false)
+    .HtmlAttributes(new {@class="m-field-readOnly", @readonly = "readonly" }))

@@ -1,0 +1,33 @@
+﻿@using System
+@using System.Collections
+@using System.ComponentModel
+@using System.Linq
+@using Nat.Web.Core.Resources
+@using Kendo.Mvc.UI.Fluent
+@using Nat.Web.Core.System.Annotations
+@model object
+@{
+    WidgetFactory<Object> kendo = Html.Kendo();
+    var settings = ViewData.ModelMetadata.ContainerType
+        .GetProperty(ViewData.ModelMetadata.PropertyName)
+        .GetCustomAttributes(typeof(ForeignKeyAttribute), false)
+        .OfType<ForeignKeyAttribute>()
+        .First();
+    var titleAttr = ViewData.ModelMetadata.ContainerType
+        .GetProperty(ViewData.ModelMetadata.PropertyName)
+        .GetCustomAttributes(typeof(TitleAttribute), false)
+        .OfType<TitleAttribute>()
+        .FirstOrDefault();
+
+    var data = (IEnumerable)ViewData[ViewData.TemplateInfo.GetFullHtmlFieldName("") + "_" + settings.ControllerName + "_Data"];
+}
+
+@foreach (var row in data)
+{
+    var propText = TypeDescriptor.GetProperties(row).Find(settings.DataTextField, false);
+    var propValue = TypeDescriptor.GetProperties(row).Find(settings.DataValueField, false);
+    @(kendo.RadioButtonFor(m => m)
+          .Label(Convert.ToString(propText.GetValue(row)))
+          .Value(propValue.GetValue(row))
+          .HtmlAttributes(new { title = titleAttr == null ? string.Empty : titleAttr.GetTitle() }))
+}

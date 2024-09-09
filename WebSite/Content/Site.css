@@ -1,0 +1,1015 @@
+﻿body {
+    padding-top: 0px;
+    padding-bottom: 10px;
+    font-size: 0.8rem;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+}
+
+textarea {
+    padding-left: 5px !important;
+    padding-right: 5px !important;
+}
+
+.fixedContent-Body {
+    overflow: hidden;
+} 
+.fixedContent {
+    left: 0px;
+    top: 38px;
+    right: 0px;
+    bottom: 0px;
+    position: fixed;
+    background-color: white;
+    background: url(images/bodybg.png)
+}
+.fixedContent.selectionLayout {
+    top: 0px;
+    bottom: 2px;
+}
+.fixedContent.fixedContent-layoutHeader {
+    top: 70px;
+}
+.fixedContent.selectionLayout.fixedContent-layoutHeader {
+    top: 32px;
+}
+.layoutHeader.selectionLayout {
+    top: 0px;
+}
+.layoutHeader {
+    left: 0px;
+    top: 38px;
+    right: 0px;
+    height: 32px;
+    padding: 5px 10px;
+    position: fixed;
+    text-align: center;
+}
+.height100 {
+    height: 100%
+}
+.k-icon-linkEmpty {
+    left: 4px;
+    position: relative;
+}
+
+#Menu {
+    background: linear-gradient(to bottom, #00bdf2 0%,#00b3f0 20%,#0066b3 75%,#004785 100%);
+}
+#MenuLast, #menuLastPane {
+    background-color: #3D94FF;
+}
+#Menu > li, #Menu > li > a,
+#MenuLast > li, #MenuLast > li > a {
+    color: white;
+}
+
+#Menu > li.k-state-highlight, #Menu > li.k-state-highlight > a,
+#Menu > li.k-state-hover, #Menu > li.k-state-hover > a,
+#Menu > li.k-state-focused, #Menu > li.k-state-focused > a,
+#MenuLast > li.k-state-highlight, #MenuLast > li.k-state-highlight > a,
+#MenuLast > li.k-state-hover, #MenuLast > li.k-state-hover > a {
+    color: #333;
+}
+
+#menuLastPane .k-i-unpin,
+#menuLastPane .k-i-pin {
+    padding: 4px;
+    margin: -12px 4px -6px -8px;
+}
+
+#Menu > .k-item {
+    font-size: 14px;
+}
+#Menu > .k-item a,
+#Menu > .k-item > span {
+    line-height: 24px;
+}
+
+.menu-fill {
+    flex: 1;
+}
+.menu-right {
+    float: right !important;
+}
+
+
+.scheduler-h-100P {
+    margin: 0;
+    padding: 0;
+    border-top-width: 0;
+    border-bottom-width: 0;
+    height: 100%;    
+}
+.scheduler-h-100P .k-scheduler-content/*,
+.scheduler-h-100P .k-scheduler-times*/ {
+    min-height: 630px;
+}
+.k-scheduler-header th, .k-scheduler-times th {
+	font-size: 100%;
+}
+.k-scheduler-toolbar.k-header {
+    background-color: #f2f2f2;
+}
+/*
+.scheduler-h-100P .k-scheduler-header-wrap > div {
+    max-height: 650px;
+    overflow-y: scroll;
+}*/
+.k-scheduler-content .k-event > div {
+    height: 100%;
+}
+.m-hide-border {
+    border: 0;
+}
+.m-all-solid-border {
+    border: 1px solid #bfbfbf;
+}
+#grid, .grid-h-100P {
+    margin: 0;
+    padding: 0;
+    /*border-width: 0;*/
+    height: 100%; /* DO NOT USE !important for setting the Grid height! */
+    height: calc(100% - 2px);
+}
+.listView-h-100P {
+    margin: 0;
+    padding: 0;
+    /*border-width: 0;*/
+    height: calc(100% - 41px); /* DO NOT USE !important for setting the Grid height! */
+    border-bottom-width: 0px;
+}
+.listViewToolbar-h-100P {
+    margin: 0;
+    padding: 0;
+    /*border-width: 0;*/
+    height: calc(100% - 92px); /* DO NOT USE !important for setting the Grid height! */
+    border-bottom-width: 0px;
+}
+.tabStrip-h-100P {
+    margin: 0;
+    padding: 0;
+    border-width: 0;
+    height: 100%; /* DO NOT USE !important for setting the Grid height! */
+}
+
+.k-window-title {
+    max-width: 850px;
+}
+.k-edit-form-container {
+    width: 900px;
+}
+.k-popup-edit-form {
+    max-height: 600px;
+    overflow-y: auto;
+}
+
+    .k-popup-edit-form.m-mail-mes-dialog {
+        max-height: 650px;
+    }
+
+        .k-popup-edit-form.m-mail-mes-dialog .m-edit-form-container-scroll {
+            max-height: 620px;
+        }
+
+            .k-popup-edit-form.m-mail-mes-dialog .m-edit-form-container-scroll .k-editor-widget {
+                width: auto;
+            }
+
+
+#k-table-properties, #k-cell-properties, #k-accessibility-properties {
+    overflow-y: scroll;
+}
+
+.m-edit-form-container-scroll {
+    margin: -1em 0;
+    padding: 1em 0;
+    max-height: 520px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    position: relative;
+}
+
+.m-edit-tab-container-scroll,
+.m-edit-tab-container-scroll-toolbar {
+    margin: 0;
+    padding: 1em 0;
+    height: calc(100% - 26px);
+    overflow-y: scroll;
+    overflow-x: auto;
+    position: relative;
+}
+
+.m-edit-tab-container-scroll-toolbar {
+    height: calc(100% - 78px);
+}
+
+.m-edit-tab-container-scroll .k-popup-edit-form,
+.m-edit-tab-container-scroll-toolbar .k-popup-edit-form {
+    overflow: visible;
+}
+
+.k-grid.k-grid-header-warp .k-grid-header .k-header .k-link {
+    height: auto;
+}
+
+.k-grid.k-grid-header-warp .k-grid-header .k-header {
+    white-space: normal;
+}
+
+html body .k-grid tbody .k-grid-download,
+html body .k-grid tbody .k-grid-comment,
+html body .k-grid tbody .k-grid-tasks,
+html body .k-grid tbody .k-grid-pin,
+html body .k-grid tbody .k-grid-sendtosign,
+html body .k-grid tbody .k-grid-signaccept,
+html body .k-grid tbody .k-grid-signcancel,
+html body .k-grid tbody .k-grid-statement,
+html body .k-grid tbody .k-grid-cancelstatement,
+html body .k-grid tbody .k-grid-favorite-add,
+html body .k-grid tbody .k-grid-favorite-remove,
+html body .k-grid tbody .k-grid-add,
+html body .k-grid tbody .k-grid-view,
+html body .k-grid tbody .k-grid-Process,
+html body .k-grid tbody .k-grid-share,
+html body .k-grid tbody .k-grid-edit,
+html body .k-grid tbody .k-grid-custom-edit,
+html body .k-grid tbody .k-grid-delete,
+html body .k-grid tbody .k-grid-note,
+html body .k-grid tbody .k-grid-sign,
+html body .k-grid tbody .k-grid-send {
+    width: auto;
+    min-width: 0;
+    padding: 2px 3.5px;
+    height: -webkit-calc(1.72em + 6px);
+    height: calc(1.72em + 6px);
+}
+
+html body .k-grid tbody .k-grid-download .k-icon,
+html body .k-grid tbody .k-grid-comment .k-icon,
+html body .k-grid tbody .k-grid-tasks .k-icon,
+html body .k-grid tbody .k-grid-pin .k-icon,
+html body .k-grid tbody .k-grid-sendtosign .k-icon,
+html body .k-grid tbody .k-grid-signaccept .k-icon,
+html body .k-grid tbody .k-grid-signcancel .k-icon,
+html body .k-grid tbody .k-grid-statement .k-icon,
+html body .k-grid tbody .k-grid-cancelstatement .k-icon,
+html body .k-grid tbody .k-grid-favorite-add .k-icon,
+html body .k-grid tbody .k-grid-favorite-remove .k-icon,
+html body .k-grid tbody .k-grid-add .k-icon,
+html body .k-grid tbody .k-grid-view .k-icon,
+html body .k-grid tbody .k-grid-Process .k-icon,
+html body .k-grid tbody .k-grid-share .k-icon,
+html body .k-grid tbody .k-grid-edit .k-icon,
+html body .k-grid tbody .k-grid-custom-edit .k-icon,
+html body .k-grid tbody .k-grid-delete .k-icon,
+html body .k-grid tbody .k-grid-note .k-icon,
+html body .k-grid tbody .k-grid-sign .k-icon,
+html body .k-grid tbody .k-grid-send .k-icon {
+    margin: 0;
+}
+
+.grid-SmallFontSize {
+    font-size: 0.75rem;
+}
+
+.k-grid.grid-SmallFontSize td {
+    line-height: 1.3em;
+    padding: 3px;
+}
+
+html body .k-grid.grid-SmallFontSize tbody .k-grid-download,
+html body .k-grid.grid-SmallFontSize tbody .k-grid-comment,
+html body .k-grid.grid-SmallFontSize tbody .k-grid-tasks,
+html body .k-grid.grid-SmallFontSize tbody .k-grid-pin,
+html body .k-grid.grid-SmallFontSize tbody .k-grid-favorite-add,
+html body .k-grid.grid-SmallFontSize tbody .k-grid-favorite-remove,
+html body .k-grid.grid-SmallFontSize tbody .k-grid-add,
+html body .k-grid.grid-SmallFontSize tbody .k-grid-view,
+html body .k-grid.grid-SmallFontSize tbody .k-grid-Process,
+html body .k-grid.grid-SmallFontSize tbody .k-grid-share,
+html body .k-grid.grid-SmallFontSize tbody .k-grid-edit,
+html body .k-grid.grid-SmallFontSize tbody .k-grid-custom-edit,
+html body .k-grid.grid-SmallFontSize tbody .k-grid-delete,
+html body .k-grid.grid-SmallFontSize tbody .k-grid-sign,
+html body .k-grid.grid-SmallFontSize tbody .k-grid-send {
+    height: -webkit-calc(1.72em + 3px);
+    height: calc(1.72em + 3px);
+    /*margin-top: -3px;
+    margin-bottom: -3px;*/
+}
+
+.requiredField:after,
+.div-requiredField label:after {
+    content: " *";
+    color: red;
+}
+
+.k-tabstrip-top .k-tabstrip-items {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    white-space: nowrap;
+    overflow: hidden;
+    flex: 0 0 0%;
+}
+.k-tabstrip-top .k-tabstrip-items .k-item {
+    overflow: visible;
+}
+
+.k-tabstrip-items .k-state-default {
+    border-color: #bfbfbf
+}
+.k-tabstrip .k-tabstrip-items .k-state-hover {
+    border-color: #007cc0
+}
+.k-tabstrip-top .k-tabstrip-items .k-link {
+    overflow: hidden;
+    max-width: 250px;
+    text-overflow: ellipsis;
+    padding-bottom: 0.3em;
+}
+.k-selectbox .k-input.m-field-readOnly,
+.k-multiselect.m-field-readOnly .k-multiselect-wrap,
+.k-multiselect.m-field-readOnly .k-multiselect-wrap .k-input,
+.k-dropdown .k-input.m-field-readOnly,
+.k-input.m-field-readOnly[readonly],
+.k-input.m-field-readOnly[readonly] k-select,
+.m-field-readOnly,
+.m-field-readOnly.k-checkbox,
+.m-field-readOnly .k-switch-container,
+textarea.k-textbox.m-field-readOnly,
+input.k-textbox.m-field-readOnly {
+    background-color: #f3f3f3;
+}
+
+.m-field-readOnly.k-multiselect .k-button,
+.k-switch-on.k-state-readonly .k-switch-container {
+    background-color: #a9a9a9;
+    border-color: #898989;
+}
+/*
+.m-field-readOnly.k-switch-on .k-switch-container {
+    color: #333
+}*/
+
+.m-readonly-toolbar .k-grid-toolbar > .k-grid-add {
+    display: none;
+}
+
+.m-multilineString {
+    white-space: pre-wrap;
+}
+.m-childWindow {
+    overflow: hidden;
+}
+
+.k-header.k-menu.k-state-selected,
+.k-header.k-menu.k-state-selected > .k-item > .k-link {
+    color: #fff;
+    background-color: #007cc0;
+    border-color: #007cc0
+}
+
+/* visible k-icon in menu https://www.telerik.com/forums/kendo-webfont-icons-not-visible-in-kendo-menu */
+.k-menu .k-sprite.k-icon,
+.k-menu-group .k-sprite.k-icon {
+    font-size: 16px;
+}
+
+#Menu .k-sprite.k-icon{
+    font-size: 28px;
+    width: 28px;
+    height: 28px;
+}
+
+.k-menu-group .k-sprite.k-icon,
+.k-menu-group .k-sprite.fas,
+.k-menu-link .k-sprite.fas,
+.k-menu-group .k-sprite.far,
+.k-menu-link .k-sprite.far {
+    font-size: 16px;
+    line-height: 18px;
+    width: 18px;
+    height: 18px;
+}
+/*.k-menu-group .k-link {
+    color: #333333
+}*/
+
+#Menu .MenuDelegationLogout .k-sprite {
+    margin-top: -16px;
+}
+
+.editor-field > .editor-field {
+    margin-right: 0;
+}
+.editor-field-2 {
+    clear: both;
+}
+.editor-field-2 > .editor-field-left,
+.k-edit-form-container .editor-field-2 > .editor-field-left {
+    width: 48%;
+    float: left;
+    padding: 0;
+}
+.editor-field-2 > .editor-field-right,
+.k-edit-form-container .editor-field-2 > .editor-field-right {
+    width: 48%;
+    padding: 0;
+}
+.editor-field.editor-field-full {
+    width: 96%;
+    float: left;
+    margin-left: 2%;
+}
+.editor-label.editor-label-full {
+    width: 96%;
+    float: left;
+    margin-left: 2%;
+    text-align: left;
+}
+.editor-label.editor-label-2full {
+    width: 13.4%;
+}
+.editor-field.editor-field-2full {
+    width: 78.8%;
+}
+
+.editor-field > .k-radio-label {
+    margin-right: 1.2em;
+}
+
+.editor-fieldset {
+    width: 100%;
+    clear: both;
+    float: left;
+}
+
+.editor-fieldset > legend {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+/* для обозначения группы полей */
+.editor-group-label {
+    clear: both;
+    font-weight: bold;
+    /*font-size: 1.2em;*/
+    margin: 0 2% 8px 2%;
+    border-bottom: 1px solid #bfbfbf;
+    padding: 8px 8px 4px 36%;
+}
+
+.noselect {
+    cursor: default;
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
+}
+
+.fa, .fab, .fal, .far, .fas {
+    padding-right: 0.18em;
+    margin-right: 0.18em;
+    margin-left: -0.12em;
+}
+
+.k-sprite.fas, .k-sprite.far {
+    font-size: 16px;
+    line-height: 18px;
+}
+.k-icon.fas, .k-icon.far {
+    font-size: 16px;
+    height: 18px;
+    margin-top: -1px;
+    margin-bottom: -1px;
+}
+.k-icon.fas.fa-project-diagram {
+    width: 22px;
+}
+.k-button-icon .k-icon.fas, 
+.k-button.k-button-icon .fas {
+    margin-left: 0;
+    margin-right: 0;
+}
+.k-map .k-icon.fas.k-marker,
+.k-map .k-icon.far.k-marker,
+.k-map .k-icon.icofont.k-marker {
+    font-size: 18px;
+    height: 40px;
+    margin-top: -20px;
+    padding: 0;
+}
+.k-event-top-actions {
+    display: none;
+}
+
+.m-headerLink.k-link,
+.m-headerLinkL.k-link,
+.m-headerLinkR.k-link {
+    border-left: 1px solid transparent;
+    border-right: 1px solid transparent;
+    padding: 6px 10px;
+    margin-top: -5px;
+    color: white;
+}
+
+.m-headerLink.k-link:hover,
+.m-headerLinkL.k-link:hover,
+.m-headerLinkR.k-link:hover {
+    border-left: 1px solid;
+    border-right: 1px solid;
+}
+.m-headerLinkL.k-link {
+    float: left;
+}
+.m-headerLinkR.k-link {
+    float: right;
+}
+.m-headerLinkR.k-link.k-state-selected {
+    color: #007cc0;
+    background-color: white;
+}
+
+.k-editor-table-wizard-dialog.k-editor-dialog .k-edit-label {
+    width: 45%;
+}
+.k-editor-table-wizard-dialog.k-editor-dialog .k-edit-field {
+    width: 46%;
+}
+.k-editor-dialog.k-editor-table-wizard-dialog.k-window-content {
+    width: 36em;
+}
+
+.editor-field > label.k-checkbox-label {
+    margin-top: 0.3em;
+}
+
+.k-tabstrip.m-tabstrip-editor {
+    border: 0;
+    margin: -12px 0 0 0;
+}
+
+.k-tabstrip.m-tabstrip-editor > div {
+    height: 450px !important;
+    padding: 12px 0;
+}
+
+.k-tabstrip.m-tabstrip-editor > div.m-tabstrip-editor-grid {
+    height: 474px !important;
+    padding: 0;
+    overflow: hidden;
+}
+
+.m-tabstrip-editor-grid .k-grid {
+    border: 0;
+    height: 100%;
+}
+
+.k-filebrowser .k-tiles-arrange .k-dropdown {
+    width: 10em;
+}
+
+.m-linkSelectForCombobox {
+    font-size: 15px;
+    border-width: 0px;
+    padding: 6px 3px 6px 2px;
+    margin-right: -2px;
+    margin-left: -2px;
+    background-color: transparent;
+}
+.k-grid tbody .m-linkSelectForCombobox.k-button {
+    min-width: inherit;
+}
+.m-linkSelectForCombobox.k-button {
+    margin-right: -2px;
+    margin-left: 1px;
+}
+
+.m-window-content {
+    overflow: visible;
+    height: calc(100% - 40px);
+    /*padding: 10px*/
+}
+.m-window-content-free {
+    margin-bottom: 44px;
+}
+.m-window-footer {
+    position: absolute;
+    bottom: 0;
+    display: block;
+    width: 100%;
+    margin: 0 -12px;
+    padding: 0;
+    border: 0;
+    text-align: right;
+}
+.m-window-with-tabstrip,
+.k-window-content .m-window-with-tabstrip {
+    padding: 12px 0;
+}
+.k-edit-form-container .m-window-footer {
+    margin: 0 -12px 13px -12px;
+}
+.k-edit-form-container.m-window-with-tabstrip .m-window-footer {
+    margin: 0 0 13px 0;
+}
+.m-window-footer .k-edit-buttons {
+    padding: 8px 10px;
+}
+.m-window-footer .k-edit-buttons button {
+     margin-left: 4px
+}
+.m-gridPhoto {
+    width: 52.5px;
+    height: 70px;
+    margin-right: 5px;
+    float: left;
+}
+.k-multiselect {
+    display: inline-block;
+}
+.m-listViewToolbar, .m-custom-toolbar {
+    border-top: 1px solid #bfbfbf;
+    border-left: 1px solid #bfbfbf;
+    border-right: 1px solid #bfbfbf;
+    padding: 0.71em;
+}
+.m-custom-toolbar {
+    border-bottom-width: 0;
+}
+.m-listViewToolbar .k-button, .m-custom-toolbar .k-button {
+    margin: 0.16em;
+}
+.m-custom-toolbar .k-button .fas {
+    padding-top: 3px;
+}
+.m-listViewRow {
+    padding: 0.4em 0.6em;
+    line-height: 1.6em;
+}
+.m-grid-simpleSize td .k-button{
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 10px;
+}
+.m-grid-simpleSize.k-grid td {
+    padding: .2em .3em
+}
+.m-grid-simpleSize > .k-grid-toolbar {
+    padding: 0.238em
+}
+.m-grid-simpleSize .k-grid-header,
+.m-grid-simpleSize .k-grid-header table{
+    display: none;
+}
+
+.k-menu.k-button {
+    background-color: #f7f7f7;
+    border: 1px solid #bfbfbf;
+}
+.k-menu.k-button .k-item {
+    border-right-width: 0;
+}
+.k-menu.k-button .k-item > .k-link {
+    margin-left: 0;
+    margin-right: 0;
+    padding: 0.3em 0.9em 0.3em 0.9em;
+    text-align: left;
+}
+
+
+.m-searchToolbarDIV {
+    width: 100%;
+    position: relative;
+    clear: right;
+}
+
+.m-searchToolbarInput, .m-searchQRToolbarInput {
+    width: 100%;
+}
+
+input.k-textbox.m-searchToolbarInput {
+    padding-right: 20px;
+}
+
+input.k-textbox.m-searchQRToolbarInput {
+    padding-right: 45px;
+}
+
+.m-searchToolbarLink, .m-searchQRToolbarLink {
+    top: 0;
+    right: 0;
+    padding: 3px 4px 4px 4px;
+    position: absolute;
+    cursor: pointer;
+    font-size: 0.8rem;
+}
+
+.m-searchQRToolbarLink {
+    right: 20px;
+    padding: 0;
+    font-size: 1.2rem;
+}
+
+.m-grid-move tr.placeholder {
+    height: 25px;
+}
+.m-grid-move tr.placeholder td {
+    border: 2px dashed #007cc0 !important;
+}
+.m-grid-move tbody tr {
+    cursor: move;
+}
+.m-grid-move.m-grid-move-pointer tbody tr {
+    cursor: pointer;
+}
+
+.m-ucFilters {
+}
+
+.m-ucFilters .fa-times {
+    right: 0;
+    bottom: 3px;
+    color: red;
+    position: absolute;
+}
+
+.m-tree-wordwrap {
+    white-space: pre-line;
+    float: right;
+}
+.k-grid tr td {
+    border-top-width: 1px;
+}
+.k-grid tr:first-child td,
+.k-grid.m-norow-border tr td {
+    border-top-width: 0;
+}
+
+.k-grid.m-grid-hr-lines thead tr th {
+    border-left-color: #c9c9c9;
+}
+
+.k-grid.m-grid-td-lines tbody tr td {
+    border-left-color: #c9c9c9;
+}
+
+.k-listview .m-listViewRow {
+    border-top: 1px solid #bfbfbf
+}
+.k-listview .m-listViewRow:first-child,
+.k-listview.m-norow-border .m-listViewRow {
+    border-top-width: 0;
+}
+.k-listview .m-listViewRow:hover {
+    background-color: #eaeaea;
+}
+
+/* стиль для скрытия заголовка таблицы */
+.k-grid-hideToolbar .k-grid-toolbar {
+    display: none;
+    padding: 0;
+}
+.k-grid-hideToolbar .k-grid-toolbar > * {
+    display: none;
+}
+
+.k-task-readonly .k-resize-handle,
+.k-task-wrap.k-task-readonly .k-task-start,
+.k-task-wrap.k-task-readonly .k-task-end {
+    display: none !important;
+}
+
+.k-gantt-toolbar .k-picker-wrap.k-state-hover,
+.k-gantt-toolbar .k-picker-wrap.k-state-focused {
+    border-color: #007cc0;
+}
+.k-gantt-toolbar .k-picker-wrap .k-link {
+    padding: 0;
+}
+
+.k-line-v {
+    width: 3px;
+    z-index: 3;
+}
+.k-line-h {
+    height: 3px;
+    z-index: 3;
+}
+.k-task-wrap,
+.k-task-wrap:hover,
+.k-task-wrap.k-state-hover {
+    z-index: 4;
+}
+
+.k-gantt-timeline .k-grid-header .k-header {
+    border-right-width: 1px;
+}
+
+.k-resource.k-alt {
+    background-color: #fff;
+}
+
+.m-highlight-changed-success .m-highlight-changed-field {
+    background-color: #cce8d8;
+    border-color: #48a06e;
+}
+
+.m-highlight-changed-info .m-highlight-changed-field {
+    background-color: #d1eaff;
+    border-color: #007cc0;
+}
+
+.m-highlight-changed-warning .m-highlight-changed-field {
+    background-color: #fef1d0;
+    border-color: #fabd21;
+}
+
+.m-highlight-changed-error .m-highlight-changed-field {
+    background-color: #ffd7d7;
+    border-color: #ff7171;
+}
+
+.m-gridMenuCommand td.k-command-cell {
+    overflow: visible;
+}
+
+.m-gridMenuCommand td.k-command-cell .k-menu {
+    min-width: 45px;
+}
+
+.k-menu-link .k-badge {
+    margin: 0 0 -0.5em .5em
+}
+tr.k-state-disabled.k-state-highlight {
+    background-color: #EFF6FC;
+}
+
+th.k-header label.k-checkbox-label.k-no-text {
+    display: none;
+}
+
+.m-qrCodeScaner {
+    text-align: center;
+}
+.m-qrCodeScaner .k-button {
+    margin-top: 6px;
+}
+
+.m-qrCodeScaner video, .m-qrCodeScaner object {
+    border: 1px solid #bfbfbf;
+}
+.m-tabStripZeroMargin.k-tabstrip > .k-content {
+    margin: 0;
+}
+.m-tabStripZeroPadding.k-tabstrip > .k-content {
+    padding: 0;
+}
+.k-splitter .m-tabStripZeroMargin.k-tabstrip > ul {
+    border-left: solid 1px #c9c9c9;
+    border-right: solid 1px #c9c9c9;
+}
+
+
+.m-grid-vertical-headers .k-grid-header .k-header.m-verticalText a,
+.m-grid-vertical-headers .k-grid-header .k-header.m-verticalText .k-link {
+    display: inline-block;
+    white-space: nowrap;
+    transform: translate(0,100%) rotate(-90deg);
+    transform-origin: 0 0;
+    position: absolute;
+    bottom: 25px;
+    width: 185px;
+}
+
+.m-grid-vertical-headers .k-grid-header .k-header.m-verticalText .k-link .k-i-sort-asc-sm,
+.m-grid-vertical-headers .k-grid-header .k-header.m-verticalText .k-link .k-i-sort-desc-sm {
+    transform: rotate(90deg);
+}
+
+.m-grid-vertical-headers .k-grid-header .k-header.m-verticalText a.k-header-column-menu {
+    bottom: 5px;
+    width: auto;
+}
+
+.m-grid-vertical-headers .k-grid-header .k-header.m-verticalText {
+    height: 200px !important;
+    padding-left: 0;
+    /*border-right: 1px solid #c9c9c9;*/
+}
+
+.m-grid-vertical-headers .k-grid-header .k-header {
+    border-left: 1px solid #c9c9c9;
+}
+
+.m-grid-vertical-headers .k-grid-header .k-header.k-group-cell {
+    border-left-width: 0;
+    border-bottom-width: 0;
+}
+
+@media (max-height: 700px) {
+    .m-grid-vertical-headers .k-grid-header .k-header.m-verticalText a,
+    .m-grid-vertical-headers .k-grid-header .k-header.m-verticalText .k-link {
+        width: 105px;
+    }
+
+    .m-grid-vertical-headers .k-grid-header .k-header.m-verticalText {
+        height: 120px !important;
+    }
+}
+
+.k-i-ctrl-z:before {
+    content: "\e100";
+}
+
+.k-i-ctrl-y:before {
+    content: "\e101";
+}
+
+fieldset > .k-content {
+    border-top: 1px solid #cccccc
+}
+
+fieldset.k-block > legend {
+    padding: 0 8px;
+    width: auto;
+    white-space: nowrap;
+}
+
+.k-grid-norecords {
+    height: calc(100% - 1px);
+}
+
+.m-floating-label-padding-top0 .k-floating-label-container {
+    padding-top: 0;
+}
+
+.m-floating-label-padding-top0 .k-floating-label-container .k-label {
+    margin-top: -1.2375em;
+}
+.m-floating-label-w100 .k-floating-label-container {
+    width: 100%
+}
+
+.m-row-margin-1P.row {
+    margin: 0 1%
+}
+.m-row-margin-1P.row .col {
+    padding: 0;
+}
+
+.k-viewhtml-dialog .k-editor-textarea {
+    width: calc(100% - 2em);
+}
+
+.k-tabstrip > .k-content.m-tabStrip-item-grid {
+    padding: 0;
+    overflow: hidden;
+    height: calc(100% - 38px);
+}
+.m-tabStrip-item-grid > .k-grid {
+    border: 0;
+}
+
+.k-grid td {
+    overflow-wrap: break-word;
+}
+.m-display-inline-block {
+    display: inline-block;
+}
+
+.m-dropdown-multiline .k-dropdown {
+    white-space: normal;
+}
+.m-div-textbox {
+    padding: 0.25em 0.5em;
+    width: 100%;
+    min-height: 27.35px;
+    overflow-y: auto;
+}
+mark, .mark {
+    padding: initial;
+    background-color: rgba(255,255,0,0.6);
+}

@@ -1,0 +1,11 @@
+﻿@model WebSite.ViewModels.TreeViewModel
+
+@(Html.Kendo().TabStrip()
+    .Name("treeTab")
+    .TabPosition(TabStripTabPosition.Top)
+    .Scrollable(true)
+    .Animation(a => a.Open(e => e.Fade(FadeDirection.In)))
+    .Events(e => e.Activate("resizeAll").Select("function(e) { VM.treeLeftMenu.TabSelect(e); }").ContentLoad("function(e) { VM.treeLeftMenu.TabContentLoad(e); }"))
+    .Items(i => { i.Add().Text("").Visible(false);})
+    .HtmlAttributes(new {@class= Model.TabCss })
+    .Deferred())

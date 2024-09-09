@@ -1,0 +1,7 @@
+@model byte?
+
+@(Html.Kendo().IntegerTextBoxFor(m => m)
+      .HtmlAttributes(new { style = "width:100%", @class="m-field-readOnly", @readonly = "readonly" })
+      .Min(byte.MinValue)
+      .Max(byte.MaxValue)
+)

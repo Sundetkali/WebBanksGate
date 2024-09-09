@@ -1,0 +1,15 @@
+@using Nat.Web.Core.Resources
+@using Nat.Web.Core.Kendo.Extensions
+@using Kendo.Mvc.UI
+@using Kendo.Mvc.UI.Fluent
+@model string
+
+@(Html.Kendo().Upload().Name(ViewData.TemplateInfo.GetFullHtmlFieldName(""))
+      .Multiple(false)
+      .Async(c => c.AutoUpload(true)
+          .ChunkSize(1024 * 1024)
+          .Save("ChunkUploadSave", "Upload", new { area = "", chunkSize = 1024 * 1024 })
+          .SaveField("uploadFile")
+          .Remove("Remove", "Upload", new { area = "" }))
+      .Events(e => e.Success("Nat.F.UploadSuccess")
+          .Remove("Nat.F.UploadRemove")))

@@ -1,0 +1,471 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="isoPayment__Title" xml:space="preserve">
+    <value>Платеж</value>
+  </data>
+  <data name="isoPayment__Comment" xml:space="preserve">
+    <value>Платеж</value>
+  </data>
+  <data name="isoPayment__DescriptionRtf" xml:space="preserve">
+    <value />
+  </data>
+  <data name="id__Title" xml:space="preserve">
+    <value>payId</value>
+  </data>
+  <data name="id__Comment" xml:space="preserve">
+    <value>payId</value>
+  </data>
+  <data name="REFid__Title" xml:space="preserve">
+    <value>REFmsgId</value>
+  </data>
+  <data name="REFid__Comment" xml:space="preserve">
+    <value>REFmsgId</value>
+  </data>
+  <data name="state__Title" xml:space="preserve">
+    <value>Статус сообщение платежа</value>
+  </data>
+  <data name="state__Comment" xml:space="preserve">
+    <value>Статус сообщение платежа</value>
+  </data>
+  <data name="isBreaked__Title" xml:space="preserve">
+    <value>isBreaked</value>
+  </data>
+  <data name="isBreaked__Comment" xml:space="preserve">
+    <value>isBreaked</value>
+  </data>
+  <data name="isBreaked__TrueText" xml:space="preserve">
+    <value>Да</value>
+  </data>
+  <data name="isBreaked__FalseText" xml:space="preserve">
+    <value>Нет</value>
+  </data>
+  <data name="grpMsgId__Title" xml:space="preserve">
+    <value>grpMsgId</value>
+  </data>
+  <data name="grpMsgId__Comment" xml:space="preserve">
+    <value>grpMsgId</value>
+  </data>
+  <data name="txnId__Title" xml:space="preserve">
+    <value>txnId</value>
+  </data>
+  <data name="txnId__Comment" xml:space="preserve">
+    <value>txnId</value>
+  </data>
+  <data name="endToEndId__Title" xml:space="preserve">
+    <value>endToEndId</value>
+  </data>
+  <data name="endToEndId__Comment" xml:space="preserve">
+    <value>endToEndId</value>
+  </data>
+  <data name="uetrId__Title" xml:space="preserve">
+    <value>uetrId</value>
+  </data>
+  <data name="uetrId__Comment" xml:space="preserve">
+    <value>uetrId</value>
+  </data>
+  <data name="grpCreDtTm__Title" xml:space="preserve">
+    <value>Время создания платежа</value>
+  </data>
+  <data name="grpCreDtTm__Comment" xml:space="preserve">
+    <value>Время создания платежа</value>
+  </data>
+  <data name="grpBtchBookg__Title" xml:space="preserve">
+    <value>BatchBook</value>
+  </data>
+  <data name="grpBtchBookg__Comment" xml:space="preserve">
+    <value>BatchBook</value>
+  </data>
+  <data name="grpNbOfTxs__Title" xml:space="preserve">
+    <value>Вложенных платежей</value>
+  </data>
+  <data name="grpNbOfTxs__Comment" xml:space="preserve">
+    <value>Вложенных платежей</value>
+  </data>
+  <data name="grpTtlIntrBkSttlmAmt__Title" xml:space="preserve">
+    <value>Сумма</value>
+  </data>
+  <data name="grpTtlIntrBkSttlmAmt__Comment" xml:space="preserve">
+    <value>Сумма</value>
+  </data>
+  <data name="ccy__Title" xml:space="preserve">
+    <value>Ссу</value>
+  </data>
+  <data name="ccy__Comment" xml:space="preserve">
+    <value>Ссу</value>
+  </data>
+  <data name="grpDate__Title" xml:space="preserve">
+    <value>Операционная дата платежа</value>
+  </data>
+  <data name="grpDate__Comment" xml:space="preserve">
+    <value>Операционная дата платежа</value>
+  </data>
+  <data name="grpSender__Title" xml:space="preserve">
+    <value>grpSender</value>
+  </data>
+  <data name="grpSender__Comment" xml:space="preserve">
+    <value>grpSender</value>
+  </data>
+  <data name="grpAddressee__Title" xml:space="preserve">
+    <value>grpAddressee</value>
+  </data>
+  <data name="grpAddressee__Comment" xml:space="preserve">
+    <value>grpAddressee</value>
+  </data>
+  <data name="chrgBr__Title" xml:space="preserve">
+    <value>Комиссия</value>
+  </data>
+  <data name="chrgBr__Comment" xml:space="preserve">
+    <value>Комиссия</value>
+  </data>
+  <data name="dbtrNm__Title" xml:space="preserve">
+    <value>Наименование отправителя</value>
+  </data>
+  <data name="dbtrNm__Comment" xml:space="preserve">
+    <value>Наименование отправителя</value>
+  </data>
+  <data name="dbtrSeco__Title" xml:space="preserve">
+    <value>Сектор экономики отправителя</value>
+  </data>
+  <data name="dbtrSeco__Comment" xml:space="preserve">
+    <value>Сектор экономики отправителя</value>
+  </data>
+  <data name="dbtrIrs__Title" xml:space="preserve">
+    <value>Резиденство отправителя</value>
+  </data>
+  <data name="dbtrIrs__Comment" xml:space="preserve">
+    <value>Резиденство отправителя</value>
+  </data>
+  <data name="dbtrAccountant__Title" xml:space="preserve">
+    <value>Главный бухгалтер отправителя</value>
+  </data>
+  <data name="dbtrAccountant__Comment" xml:space="preserve">
+    <value>Главный бухгалтер отправителя</value>
+  </data>
+  <data name="dbtrHead__Title" xml:space="preserve">
+    <value>Руководитель отправителя</value>
+  </data>
+  <data name="dbtrHead__Comment" xml:space="preserve">
+    <value>Руководитель отправителя</value>
+  </data>
+  <data name="dbtrIdn__Title" xml:space="preserve">
+    <value>ИИН, БИН отправителя</value>
+  </data>
+  <data name="dbtrIdn__Comment" xml:space="preserve">
+    <value>ИИН, БИН отправителя</value>
+  </data>
+  <data name="dbtrCtryOfRes__Title" xml:space="preserve">
+    <value>Страна резиденства отправителя</value>
+  </data>
+  <data name="dbtrCtryOfRes__Comment" xml:space="preserve">
+    <value>Страна резиденства отправителя</value>
+  </data>
+  <data name="dbtrAcct__Title" xml:space="preserve">
+    <value>Счет отправителя</value>
+  </data>
+  <data name="dbtrAcct__Comment" xml:space="preserve">
+    <value>Счет отправителя</value>
+  </data>
+  <data name="dbtrAgt__Title" xml:space="preserve">
+    <value>Бик отправителя</value>
+  </data>
+  <data name="dbtrAgt__Comment" xml:space="preserve">
+    <value>Бик отправителя</value>
+  </data>
+  <data name="dbtr__Title" xml:space="preserve">
+    <value>отправитель</value>
+  </data>
+  <data name="dbtr__Comment" xml:space="preserve">
+    <value>отправитель</value>
+  </data>
+  <data name="cdtr__Title" xml:space="preserve">
+    <value>получатель</value>
+  </data>
+  <data name="cdtr__Comment" xml:space="preserve">
+    <value>получатель</value>
+  </data>
+  <data name="cdtrNm__Title" xml:space="preserve">
+    <value>Наименование получателя</value>
+  </data>
+  <data name="cdtrNm__Comment" xml:space="preserve">
+    <value>Наименование получателя</value>
+  </data>
+  <data name="cdtrSeco__Title" xml:space="preserve">
+    <value>Сектор экономики получателя</value>
+  </data>
+  <data name="cdtrSeco__Comment" xml:space="preserve">
+    <value>Сектор экономики получателя</value>
+  </data>
+  <data name="cdtrIrs__Title" xml:space="preserve">
+    <value>Резиденство получателя</value>
+  </data>
+  <data name="cdtrIrs__Comment" xml:space="preserve">
+    <value>Резиденство получателя</value>
+  </data>
+  <data name="cdtrAccountant__Title" xml:space="preserve">
+    <value>Главный бухгалтер получателя</value>
+  </data>
+  <data name="cdtrAccountant__Comment" xml:space="preserve">
+    <value>Главный бухгалтер получателя</value>
+  </data>
+  <data name="cdtrHead__Title" xml:space="preserve">
+    <value>Руководитель получателя</value>
+  </data>
+  <data name="cdtrHead__Comment" xml:space="preserve">
+    <value>Руководитель получателя</value>
+  </data>
+  <data name="cdtrIdn__Title" xml:space="preserve">
+    <value>ИИН, БИН получателя</value>
+  </data>
+  <data name="cdtrIdn__Comment" xml:space="preserve">
+    <value>ИИН, БИН получателя</value>
+  </data>
+  <data name="cdtrCtryOfRes__Title" xml:space="preserve">
+    <value>Страна резиденства получателя</value>
+  </data>
+  <data name="cdtrCtryOfRes__Comment" xml:space="preserve">
+    <value>Страна резиденства получателя</value>
+  </data>
+  <data name="cdtrAcct__Title" xml:space="preserve">
+    <value>Счет получателя</value>
+  </data>
+  <data name="cdtrAcct__Comment" xml:space="preserve">
+    <value>Счет получателя</value>
+  </data>
+  <data name="cdtrAgt__Title" xml:space="preserve">
+    <value>Бик получателя</value>
+  </data>
+  <data name="cdtrAgt__Comment" xml:space="preserve">
+    <value>Бик получателя</value>
+  </data>
+  <data name="cdtrAgtAcct__Title" xml:space="preserve">
+    <value>cdtrAgtAcct</value>
+  </data>
+  <data name="cdtrAgtAcct__Comment" xml:space="preserve">
+    <value>cdtrAgtAcct</value>
+  </data>
+  <data name="cdtrAgtAcctTp__Title" xml:space="preserve">
+    <value>cdtrAgtAcctTp</value>
+  </data>
+  <data name="cdtrAgtAcctTp__Comment" xml:space="preserve">
+    <value>cdtrAgtAcctTp</value>
+  </data>
+  <data name="cdtrKnp__Title" xml:space="preserve">
+    <value>КНП</value>
+  </data>
+  <data name="cdtrKnp__Comment" xml:space="preserve">
+    <value>КНП</value>
+  </data>
+  <data name="cdtrNb__Title" xml:space="preserve">
+    <value>Номер документа</value>
+  </data>
+  <data name="cdtrNb__Comment" xml:space="preserve">
+    <value>Номер документа</value>
+  </data>
+  <data name="cdtrRltdDt__Title" xml:space="preserve">
+    <value>Дата документа</value>
+  </data>
+  <data name="cdtrRltdDt__Comment" xml:space="preserve">
+    <value>Дата документа</value>
+  </data>
+  <data name="instrPrty__Title" xml:space="preserve">
+    <value>instrPrty</value>
+  </data>
+  <data name="instrPrty__Comment" xml:space="preserve">
+    <value>instrPrty</value>
+  </data>
+  <data name="instrLc__Title" xml:space="preserve">
+    <value>instrLc</value>
+  </data>
+  <data name="instrLc__Comment" xml:space="preserve">
+    <value>instrLc</value>
+  </data>
+  <data name="orgBookAcc__Title" xml:space="preserve">
+    <value>orgBookAcc</value>
+  </data>
+  <data name="orgBookAcc__Comment" xml:space="preserve">
+    <value>orgBookAcc</value>
+  </data>
+  <data name="body__Title" xml:space="preserve">
+    <value>body</value>
+  </data>
+  <data name="body__Comment" xml:space="preserve">
+    <value>body</value>
+  </data>
+  <data name="isVolpay__Title" xml:space="preserve">
+    <value>isVolpay</value>
+  </data>
+  <data name="isVolpay__Comment" xml:space="preserve">
+    <value>isVolpay</value>
+  </data>
+  <data name="isVolpay__TrueText" xml:space="preserve">
+    <value>Да</value>
+  </data>
+  <data name="isVolpay__FalseText" xml:space="preserve">
+    <value>Нет</value>
+  </data>
+  <data name="sts__Title" xml:space="preserve">
+    <value>sts</value>
+  </data>
+  <data name="sts__Comment" xml:space="preserve">
+    <value>sts</value>
+  </data>
+  <data name="stsRelation__Title" xml:space="preserve">
+    <value>stsRelation</value>
+  </data>
+  <data name="stsRelation__Comment" xml:space="preserve">
+    <value>stsRelation</value>
+  </data>
+  <data name="amntEq__Title" xml:space="preserve">
+    <value>amntEq</value>
+  </data>
+  <data name="amntEq__Comment" xml:space="preserve">
+    <value>amntEq</value>
+  </data>
+  <data name="accCls__Title" xml:space="preserve">
+    <value>accCls</value>
+  </data>
+  <data name="accCls__Comment" xml:space="preserve">
+    <value>accCls</value>
+  </data>
+  <data name="bclass__Title" xml:space="preserve">
+    <value>КБК</value>
+  </data>
+  <data name="bclass__Comment" xml:space="preserve">
+    <value>КБК</value>
+  </data>
+  <data name="asgn__Title" xml:space="preserve">
+    <value>asgn</value>
+  </data>
+  <data name="asgn__Comment" xml:space="preserve">
+    <value>asgn</value>
+  </data>
+  <data name="isoPayment__VMTitle" xml:space="preserve">
+    <value>Платеж</value>
+  </data>
+  <data name="isoPayment__VMComment" xml:space="preserve">
+    <value>Платеж</value>
+  </data>
+  <data name="isoPaymentMinimal__VMTitle" xml:space="preserve">
+    <value>Платеж</value>
+  </data>
+  <data name="isoPaymentMinimal__VMComment" xml:space="preserve">
+    <value>Платеж</value>
+  </data>
+</root>

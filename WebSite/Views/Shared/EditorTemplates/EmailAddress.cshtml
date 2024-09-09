@@ -1,0 +1,6 @@
+﻿@using WebSite.Properties
+@model object 
+@{
+    var emailError = string.Format(Resources.EEmailError, ViewData.ModelMetadata.DisplayName);
+}
+@Html.TextBoxFor(model => model, new { @class="k-textbox", style = "width:100%", type="email", data_email_msg = emailError })

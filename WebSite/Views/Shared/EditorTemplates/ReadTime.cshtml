@@ -1,0 +1,4 @@
+@model System.DateTime?
+
+@(Html.Kendo().TimePickerFor(m => m)
+          .HtmlAttributes(new { @class = "m-field-readOnly", @readonly = "readonly" }))

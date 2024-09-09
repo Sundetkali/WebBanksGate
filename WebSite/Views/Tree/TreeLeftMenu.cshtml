@@ -1,0 +1,47 @@
+﻿@using WebSite.Properties
+@model WebSite.ViewModels.TreeViewModel
+
+@(Html.Kendo().PanelBar()
+    .Name("menuTreePanel")
+    .HtmlAttributes(new { @class = "tabStrip-h-100P", style = Model.HideTreeLeftMenu ? "display: none" : "" })
+    .ExpandMode(PanelBarExpandMode.Single)
+    .Items(i => i.Add()
+        .Text(Model.Title)
+        .SpriteCssClasses(string.IsNullOrEmpty(Model.LayoutTitle) ? Model.IconCss : null)
+        .Expanded(true)
+        .Selected(true)
+        .HtmlAttributes(new { @class = "grid-h-100P" })
+        .ContentHtmlAttributes(new { style = "height: calc(100% - 33px);" })
+        .Content(
+            @<text>
+                @(Html.Kendo().TextBox().Name("menuTreeQuickSearch")
+                    .HtmlAttributes(new { placeholder = Resources.SQuickSearch, style = "width: 100%", @class="k-textbox" })
+                    .Deferred())
+                @(Html.Kendo().TreeView()
+                    .Name("menuTreeView")
+                    .DataTextField("name")
+                    .AutoBind(false)
+                    .Template("# if (item.HtmlEncode) { # #: item.name # # } else { # #= item.name # # } #")
+                    .DataSource(dataSource => dataSource
+                        .Custom()
+                        .Transport(t => t.Read(c => c.Action("GetDataSelectionTree", "ADM_TreeViewLeftMenu", new { area = "ADM", onlyVisible = true, filterByPermissionAccess = true }).Type(HttpVerbs.Post).Data("function() { return $.extend(" + Model.GetDataParamsJson + ", { Filter_refTreeMenu: " + Model.id + ", expandedIds: VM.treeLeftMenu.getExpanded() }); }")))
+                        .Type("aspnetmvc-ajax")
+                        .Schema(schema => schema
+                            .Data("Data")
+                            .Total("Total")
+                            .Model(m => m.Id("CombineId")
+                                /*.Children("HasChildren")*/
+                                .Children(cc => cc.Custom()
+                                    .Transport(t => t.Read(c => c.Action("GetDataSelectionTree", "ADM_TreeViewLeftMenu", new { area = "ADM", onlyVisible = true, filterByPermissionAccess = true }).Type(HttpVerbs.Post).Data("function() { return $.extend(" + Model.GetDataParamsJson + ",  { Filter_refTreeMenu: " + Model.id + ", expandedIds: VM.treeLeftMenu.getExpanded() }); }")))
+                                    .Type("aspnetmvc-ajax")
+                                    .Events(e => e
+                                        .RequestStart("function(e){ VM.treeLeftMenu.onRequestStart(e); }")
+                                        .RequestEnd("function(e){ VM.treeLeftMenu.onRequestEnd(e); }"))))))
+                    .Events(e => e.Select("function(e) { VM.treeLeftMenu.MenuSelect(e); }"))
+                    .AutoScroll(true)
+                    .LoadOnDemand(false)
+                    .HtmlAttributes(new { @class = "grid-h-100P", style = "height: calc(100% - 26px)" })
+                    .Deferred())
+             </text>)
+    )
+    .Deferred())

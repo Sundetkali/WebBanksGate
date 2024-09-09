@@ -1,0 +1,173 @@
+﻿@using System.Collections
+@using Dictionaries.Areas.DIC.GeneratedResources
+@using BanksGateDataModel.Models
+@using Dictionaries.Areas.DIC.ViewModels
+@using Nat.Web.Core.Kendo.Extensions
+@using Nat.Web.Core.Kendo.ViewModels
+@using Nat.Web.Core.System.ViewModels
+@using Kendo.Mvc.UI
+@using Kendo.Mvc.UI.Fluent
+
+@model Nat.Web.Core.System.ViewModels.GridViewModel
+@{
+    ViewData["Title"] = MT_Messages_TBLResources.MT_Messages_TBL__Title;
+    WidgetFactory<GridViewModel> kendo = Html.Kendo();
+    if (Model.EmptyLayout)
+    {
+        Layout = (Model.Route?.Deferred ?? false) ? "~/Views/Shared/_DeferredNoLayout.cshtml" : null;
+    }
+    else
+    {
+        Layout = "~/Views/Shared/_Layout.cshtml";
+    }
+}
+
+@(kendo.StandardGrid<MT_Messages_TBLViewModel>(Model)
+    .Columns(columns =>
+        {
+            if (Model?.Route?.GridCheckboxSelection ?? false)
+                columns.Select().Width(35).Locked(false);
+
+            var allowDestroy = Model.Destroy?.UserIsInAnyRole(kendo.HtmlHelper.ViewContext.HttpContext) ?? false;
+            var allowUpdate = Model.Update?.UserIsInAnyRole(kendo.HtmlHelper.ViewContext.HttpContext) ?? false;
+            if (allowDestroy || allowUpdate)
+            {
+                columns.Command(command =>
+                    {
+                        command.View();
+                        if (allowUpdate) command.Edit();
+                        if (allowDestroy) command.Destroy();
+                    }).Width(115).Locked(false);
+            }
+            columns.Bound(r => r.MESSAGE_BODY)
+                .HeaderHtmlAttributes(new { title = Dictionaries.Areas.DIC.GeneratedResources.MT_Messages_TBLResources.MESSAGE_BODY__Title, style = "white-space:normal" })
+                .Visible(true);
+            columns.Bound(r => r.MESSAGE_DATE)
+                .HeaderHtmlAttributes(new { title = Dictionaries.Areas.DIC.GeneratedResources.MT_Messages_TBLResources.MESSAGE_DATE__Title, style = "white-space:normal" })
+                .Visible(true);
+            columns.Bound(r => r.MESSAGE_SESSION)
+                .HeaderHtmlAttributes(new { title = Dictionaries.Areas.DIC.GeneratedResources.MT_Messages_TBLResources.MESSAGE_SESSION__Title, style = "white-space:normal" })
+                .Visible(true);
+            columns.Bound(r => r.MESSAGE_REFERENS)
+                .HeaderHtmlAttributes(new { title = Dictionaries.Areas.DIC.GeneratedResources.MT_Messages_TBLResources.MESSAGE_REFERENS__Title, style = "white-space:normal" })
+                .Visible(true);
+            columns.Bound(r => r.MESSAGE_NAMESUB)
+                .HeaderHtmlAttributes(new { title = Dictionaries.Areas.DIC.GeneratedResources.MT_Messages_TBLResources.MESSAGE_NAMESUB__Title, style = "white-space:normal" })
+                .Visible(true);
+            columns.Bound(r => r.MESSAGE_FLAGIO)
+                .HeaderHtmlAttributes(new { title = Dictionaries.Areas.DIC.GeneratedResources.MT_Messages_TBLResources.MESSAGE_FLAGIO__Title, style = "white-space:normal" })
+                .Visible(true);
+            columns.Bound(r => r.MESSAGE_STATE)
+                .HeaderHtmlAttributes(new { title = Dictionaries.Areas.DIC.GeneratedResources.MT_Messages_TBLResources.MESSAGE_STATE__Title, style = "white-space:normal" })
+                .Visible(true);
+            columns.Bound(r => r.MESSAGE_TYPE)
+                .HeaderHtmlAttributes(new { title = Dictionaries.Areas.DIC.GeneratedResources.MT_Messages_TBLResources.MESSAGE_TYPE__Title, style = "white-space:normal" })
+                .Visible(true);
+            columns.Bound(r => r.MESSAGE_TIMEIN)
+                .HeaderHtmlAttributes(new { title = Dictionaries.Areas.DIC.GeneratedResources.MT_Messages_TBLResources.MESSAGE_TIMEIN__Title, style = "white-space:normal" })
+                .Visible(true);
+            columns.Bound(r => r.MESSAGE_TIMEOUT)
+                .HeaderHtmlAttributes(new { title = Dictionaries.Areas.DIC.GeneratedResources.MT_Messages_TBLResources.MESSAGE_TIMEOUT__Title, style = "white-space:normal" })
+                .Visible(true);
+            columns.Bound(r => r.MESSAGE_INTERNAL_REFERENSE)
+                .HeaderHtmlAttributes(new { title = Dictionaries.Areas.DIC.GeneratedResources.MT_Messages_TBLResources.MESSAGE_INTERNAL_REFERENSE__Title, style = "white-space:normal" })
+                .Visible(true);
+            columns.Bound(r => r.MESSAGE_ERROR)
+                .HeaderHtmlAttributes(new { title = Dictionaries.Areas.DIC.GeneratedResources.MT_Messages_TBLResources.MESSAGE_ERROR__Title, style = "white-space:normal" })
+                .Visible(true);
+            columns.Bound(r => r.MESSAGE_OWNER)
+                .HeaderHtmlAttributes(new { title = Dictionaries.Areas.DIC.GeneratedResources.MT_Messages_TBLResources.MESSAGE_OWNER__Title, style = "white-space:normal" })
+                .Visible(true);
+            columns.Bound(r => r.MESSAGE_PACKET)
+                .HeaderHtmlAttributes(new { title = Dictionaries.Areas.DIC.GeneratedResources.MT_Messages_TBLResources.MESSAGE_PACKET__Title, style = "white-space:normal" })
+                .Visible(true);
+            columns.Bound(r => r.M_DOC_USER)
+                .HeaderHtmlAttributes(new { title = Dictionaries.Areas.DIC.GeneratedResources.MT_Messages_TBLResources.M_DOC_USER__Title, style = "white-space:normal" })
+                .Visible(true);
+            columns.Bound(r => r.M_DOC_NUM)
+                .HeaderHtmlAttributes(new { title = Dictionaries.Areas.DIC.GeneratedResources.MT_Messages_TBLResources.M_DOC_NUM__Title, style = "white-space:normal" })
+                .Visible(true);
+            columns.Bound(r => r.M_DOC_DATE)
+                .HeaderHtmlAttributes(new { title = Dictionaries.Areas.DIC.GeneratedResources.MT_Messages_TBLResources.M_DOC_DATE__Title, style = "white-space:normal" })
+                .Visible(true);
+            columns.Bound(r => r.USER_OPER_DATE)
+                .HeaderHtmlAttributes(new { title = Dictionaries.Areas.DIC.GeneratedResources.MT_Messages_TBLResources.USER_OPER_DATE__Title, style = "white-space:normal" })
+                .Visible(true);
+            columns.Bound(r => r.m_message_operdate)
+                .HeaderHtmlAttributes(new { title = Dictionaries.Areas.DIC.GeneratedResources.MT_Messages_TBLResources.m_message_operdate__Title, style = "white-space:normal" })
+                .Visible(true);
+            columns.Bound(r => r.m_message_createdate)
+                .HeaderHtmlAttributes(new { title = Dictionaries.Areas.DIC.GeneratedResources.MT_Messages_TBLResources.m_message_createdate__Title, style = "white-space:normal" })
+                .Visible(true);
+            columns.Bound(r => r.m_message_authdate)
+                .HeaderHtmlAttributes(new { title = Dictionaries.Areas.DIC.GeneratedResources.MT_Messages_TBLResources.m_message_authdate__Title, style = "white-space:normal" })
+                .Visible(true);
+            columns.Bound(r => r.m_message_referense)
+                .HeaderHtmlAttributes(new { title = Dictionaries.Areas.DIC.GeneratedResources.MT_Messages_TBLResources.m_message_referense__Title, style = "white-space:normal" })
+                .Visible(true);
+            columns.Bound(r => r.m_message_type)
+                .HeaderHtmlAttributes(new { title = Dictionaries.Areas.DIC.GeneratedResources.MT_Messages_TBLResources.m_message_type__Title, style = "white-space:normal" })
+                .Visible(true);
+            columns.Bound(r => r.m_message_subtype)
+                .HeaderHtmlAttributes(new { title = Dictionaries.Areas.DIC.GeneratedResources.MT_Messages_TBLResources.m_message_subtype__Title, style = "white-space:normal" })
+                .Visible(true);
+            columns.Bound(r => r.m_message_owner)
+                .HeaderHtmlAttributes(new { title = Dictionaries.Areas.DIC.GeneratedResources.MT_Messages_TBLResources.m_message_owner__Title, style = "white-space:normal" })
+                .Visible(true);
+            columns.Bound(r => r.m_message_auth)
+                .HeaderHtmlAttributes(new { title = Dictionaries.Areas.DIC.GeneratedResources.MT_Messages_TBLResources.m_message_auth__Title, style = "white-space:normal" })
+                .Visible(true);
+            columns.Bound(r => r.message_systemcomment)
+                .HeaderHtmlAttributes(new { title = Dictionaries.Areas.DIC.GeneratedResources.MT_Messages_TBLResources.message_systemcomment__Title, style = "white-space:normal" })
+                .Visible(true);
+            columns.BoundBool(r => r.m_message_rcx)
+                .HeaderHtmlAttributes(new { title = Dictionaries.Areas.DIC.GeneratedResources.MT_Messages_TBLResources.m_message_rcx__Title, style = "white-space:normal" })
+                .Visible(true);
+            columns.Bound(r => r.messageDocumentReferense)
+                .HeaderHtmlAttributes(new { title = Dictionaries.Areas.DIC.GeneratedResources.MT_Messages_TBLResources.messageDocumentReferense__Title, style = "white-space:normal" })
+                .Visible(true);
+            columns.Bound(r => r.psstScreening)
+                .HeaderHtmlAttributes(new { title = Dictionaries.Areas.DIC.GeneratedResources.MT_Messages_TBLResources.psstScreening__Title, style = "white-space:normal" })
+                .Visible(true);
+            columns.Bound(r => r.operDate)
+                .HeaderHtmlAttributes(new { title = Dictionaries.Areas.DIC.GeneratedResources.MT_Messages_TBLResources.operDate__Title, style = "white-space:normal" })
+                .Visible(true);
+            columns.Bound(r => r.rcxREF)
+                .HeaderHtmlAttributes(new { title = Dictionaries.Areas.DIC.GeneratedResources.MT_Messages_TBLResources.rcxREF__Title, style = "white-space:normal" })
+                .Visible(true);
+            columns.Bound(r => r.restApiId)
+                .HeaderHtmlAttributes(new { title = Dictionaries.Areas.DIC.GeneratedResources.MT_Messages_TBLResources.restApiId__Title, style = "white-space:normal" })
+                .Visible(true);
+            columns.Bound(r => r.psstId)
+                .HeaderHtmlAttributes(new { title = Dictionaries.Areas.DIC.GeneratedResources.MT_Messages_TBLResources.psstId__Title, style = "white-space:normal" })
+                .Visible(true);
+            columns.Bound(r => r.externalSystemId)
+                .HeaderHtmlAttributes(new { title = Dictionaries.Areas.DIC.GeneratedResources.MT_Messages_TBLResources.externalSystemId__Title, style = "white-space:normal" })
+                .Visible(true);
+            columns.Bound(r => r.externalState)
+                .HeaderHtmlAttributes(new { title = Dictionaries.Areas.DIC.GeneratedResources.MT_Messages_TBLResources.externalState__Title, style = "white-space:normal" })
+                .Visible(true);
+            columns.Bound(r => r.rcxUNIQUEREF)
+                .HeaderHtmlAttributes(new { title = Dictionaries.Areas.DIC.GeneratedResources.MT_Messages_TBLResources.rcxUNIQUEREF__Title, style = "white-space:normal" })
+                .Visible(true);
+            columns.BoundBool(r => r.reconciliationExported)
+                .HeaderHtmlAttributes(new { title = Dictionaries.Areas.DIC.GeneratedResources.MT_Messages_TBLResources.reconciliationExported__Title, style = "white-space:normal" })
+                .Visible(true);
+            columns.Bound(r => r.maker)
+                .HeaderHtmlAttributes(new { title = Dictionaries.Areas.DIC.GeneratedResources.MT_Messages_TBLResources.maker__Title, style = "white-space:normal" })
+                .Visible(true);
+            columns.Bound(r => r.checker)
+                .HeaderHtmlAttributes(new { title = Dictionaries.Areas.DIC.GeneratedResources.MT_Messages_TBLResources.checker__Title, style = "white-space:normal" })
+                .Visible(true);
+            columns.Bound(r => r.isRtrn)
+                .HeaderHtmlAttributes(new { title = Dictionaries.Areas.DIC.GeneratedResources.MT_Messages_TBLResources.isRtrn__Title, style = "white-space:normal" })
+                .Visible(true);
+            columns.Bound(r => r.rtrnOrgId)
+                .HeaderHtmlAttributes(new { title = Dictionaries.Areas.DIC.GeneratedResources.MT_Messages_TBLResources.rtrnOrgId__Title, style = "white-space:normal" })
+                .Visible(true);
+            columns.Bound(r => r.rtrnOrgSts)
+                .HeaderHtmlAttributes(new { title = Dictionaries.Areas.DIC.GeneratedResources.MT_Messages_TBLResources.rtrnOrgSts__Title, style = "white-space:normal" })
+                .Visible(true);
+        })
+    .HtmlAttributes(new { @class = "grid-h-100P" })
+    .Deferred(Model.Route?.Deferred ?? !Model.EmptyLayout))

@@ -1,0 +1,10 @@
+﻿@model WebSite.ViewModels.MainMenuViewModel
+@{ Layout = null; }
+
+@(Nat.Web.Core.Kendo.Extensions.Menu.BindTo(
+    Html.Kendo().Menu().Name("Menu")
+        .Events(c => c.Select("HomeMenuSelect"))
+        .HtmlAttributes(new { @class = "m-icon-circle m-icon-inv" })
+        .Scrollable(true)
+        .HoverDelay(300),
+    Model.MenuService, Model.ChildredForId, Model.MaxChildrenLevel).Deferred())

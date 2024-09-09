@@ -1,0 +1,10 @@
+﻿@using Nat.Web.Core.System.CMS
+@model long?
+
+@(Nat.Web.Core.Kendo.Extensions.Menu.BindTo(
+    Html.Kendo().Menu().Name("Menu")
+        .Events(c => c.Select("HomeMenuSelect"))
+        .HtmlAttributes(new { @class = "m-icon-circle m-icon-inv" })
+        .Scrollable(true)
+        .HoverDelay(300),
+    DependencyResolver.Current.GetService<IMenuService>(), Model).Deferred())

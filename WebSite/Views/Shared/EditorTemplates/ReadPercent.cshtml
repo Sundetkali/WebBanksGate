@@ -1,0 +1,6 @@
+﻿@model object
+
+@(Html.Kendo().ProgressBar()
+    .Name(ViewData.TemplateInfo.GetFullHtmlFieldName(""))
+    .Type(ProgressBarType.Percent)
+    .HtmlAttributes(new { style = "width:100%", @class="m-field-readOnly", @readonly = "readonly", data_bind="value:" + ViewData.TemplateInfo.GetFullHtmlFieldName("") }))

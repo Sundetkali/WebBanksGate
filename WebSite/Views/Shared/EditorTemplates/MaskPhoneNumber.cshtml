@@ -1,0 +1,15 @@
+﻿@using System.Linq
+@using Nat.Web.Core.System.Annotations
+@model object 
+@{
+    var titleAttr = ViewData.ModelMetadata.ContainerType
+        .GetProperty(ViewData.ModelMetadata.PropertyName)
+        .GetCustomAttributes(typeof(TitleAttribute), false)
+        .OfType<TitleAttribute>()
+        .FirstOrDefault();
+    var description = ViewData.ModelMetadata.Description != ViewData.ModelMetadata.DisplayName ? ViewData.ModelMetadata.Description : "";
+}
+@(Html.Kendo().MaskedTextBoxFor(model => model)
+    .Mask("+7 (799) 999-99-99")
+    .HtmlAttributes(new { style = "width:100%", spellcheck = true, title = titleAttr == null ? description : titleAttr.GetTitle() })
+)

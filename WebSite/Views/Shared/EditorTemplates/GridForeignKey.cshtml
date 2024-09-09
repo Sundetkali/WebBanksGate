@@ -1,0 +1,28 @@
+﻿@using System.Collections
+@using Nat.Web.Core.Kendo.Extensions
+@using Nat.Web.Core.Resources
+@using Nat.Web.Core.System.Annotations
+@using Nat.Web.Core.System.Extensions
+@model object
+@{
+    var settings = ViewData.ModelMetadata.GetPropertyAttr<ForeignKeyAttribute>();
+    var title = ViewData.ModelMetadata.GetPropertyAttr<TitleAttribute>()?.GetTitle() ?? "";
+    var dropdown = Html.Kendo().DropDownListFor(m => m)
+        .BindTo((IEnumerable)ViewData[ViewData.TemplateInfo.GetFullHtmlFieldName("") + "_" + settings.ControllerName + "_Data"])
+        .ValuePrimitive(true)
+        .OptionLabel(SharedResources.SNotSelected)
+        .InitForeignKey(settings, settings.GetOptionsJson(ViewData))
+        .HtmlAttributes(new
+        {
+            style = "width:100%",
+            title,
+            @class = (string)ViewData["class"] ?? ""
+        });
+
+    if ((bool?) ViewBag.EditorTemplateDeferred == true)
+    {
+        dropdown.Deferred();
+    }
+}
+
+@dropdown

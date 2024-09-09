@@ -1,0 +1,361 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="CalendarDateReject" xml:space="preserve">
+    <value>Қисайту</value>
+  </data>
+  <data name="CalendarDate_Approve" xml:space="preserve">
+    <value>Бекіту</value>
+  </data>
+  <data name="CalendarDate_ApproveConfirm" xml:space="preserve">
+    <value>Сіз шынымен бекіткіңіз келе ме?</value>
+  </data>
+  <data name="ClientsInPayment_Investigation" xml:space="preserve">
+    <value>Тергеу</value>
+  </data>
+  <data name="ApproveCantError" xml:space="preserve">
+    <value>Бекіту мүмкін емес, жазба мәртебесі өзгерді, беттегі деректерді жаңартыңыз</value>
+  </data>
+  <data name="BINMustBeUnique" xml:space="preserve">
+    <value>БСН/ЖСН бірегей болуы тиіс, осындай БСН/ЖСН бар жазба бұрыннан бар</value>
+  </data>
+  <data name="CalendarDate_NotifBody" xml:space="preserve">
+    <value>Күнтізбеге {0} күніне қолданушымен  {1} өзгерту енгізілді.
+Өзгертудің күшіне енуі үшін «Күнтізбе» анықтамалығына өтіп, өзгертуді растаңыз</value>
+  </data>
+  <data name="CalendarDate_NotifSubject" xml:space="preserve">
+    <value>Күнтізбе күнін қосу немесе өзгерту</value>
+  </data>
+  <data name="CalendarDate_RejectConfirm" xml:space="preserve">
+    <value>Сіз шын мәнінде қайтарғыңыз келе ме?</value>
+  </data>
+  <data name="ClientList_XLS_FilesOnly" xml:space="preserve">
+    <value>xls, xlsx түріндегі файлдарды ғана жүктеуге болады</value>
+  </data>
+  <data name="ClientSearchByBaseIdBinName" xml:space="preserve">
+    <value>БСН, BaseID, Валюталық келісім-шарттың есептік нөмірі, Клиенттің атауы өрістері бойынша іздеу</value>
+  </data>
+  <data name="ClientsInPayment_Link" xml:space="preserve">
+    <value>Байластыру</value>
+  </data>
+  <data name="RejectCantError" xml:space="preserve">
+    <value>Қайтару мүмкін емес, жазба мәртебесі өзгерді, беттегі деректерді жаңартыңыз</value>
+  </data>
+  <data name="ResetFilter" xml:space="preserve">
+    <value>Сүзгіні қайта орнату</value>
+  </data>
+  <data name="RNNMustBeUnique" xml:space="preserve">
+    <value>СТН бірегей болуы керек, ондай жазба бұрыннан бар</value>
+  </data>
+  <data name="SClientsInContact_AdminMessages" xml:space="preserve">
+    <value>CF-дан  әкімдік хабарлар тізімі</value>
+  </data>
+  <data name="SClientsInContact_ClientBankAccounts" xml:space="preserve">
+    <value>Клиент шоттарының тізімі</value>
+  </data>
+  <data name="SClientsInContact_ClientData" xml:space="preserve">
+    <value>Клиент деректері</value>
+  </data>
+  <data name="UNNB_XLS_FilesOnly" xml:space="preserve">
+    <value>xls, xlsx түріндегі файлдарды ғана жүктеуге болады</value>
+  </data>
+  <data name="UploadContactList" xml:space="preserve">
+    <value>Клиенттің контактілік тұлғаларын жүктеу</value>
+  </data>
+  <data name="UploadUNNB" xml:space="preserve">
+    <value>ҚР ҰБ қолданыстағы есептік нөмірлері туралы мәліметтерді жүктеу</value>
+  </data>
+  <data name="ClientsData" xml:space="preserve">
+    <value>Клиент деректері</value>
+  </data>
+  <data name="AdditionalClientInfo" xml:space="preserve">
+    <value>Клиент бойынша қосымша ақпарат</value>
+  </data>
+  <data name="ClientSearchByClientForm" xml:space="preserve">
+    <value>Іздеу клиенттің атауы, БИН, BaseID бойынша жүргізіледі</value>
+  </data>
+  <data name="UploadClientsMppList" xml:space="preserve">
+    <value>«Клиент бойынша MPP» жүктеу</value>
+  </data>
+  <data name="UploadClientBankAccounts" xml:space="preserve">
+    <value>"Клиенттердің шоттарын" жүктеу</value>
+  </data>
+  <data name="UploadSignatories" xml:space="preserve">
+    <value>"Қол қоюшыларды" жүктеу</value>
+  </data>
+  <data name="UploadExcel" xml:space="preserve">
+    <value>Excel ге импорттау</value>
+  </data>
+  <data name="From" xml:space="preserve">
+    <value>басы</value>
+  </data>
+  <data name="To" xml:space="preserve">
+    <value>аралық</value>
+  </data>
+  <data name="UnloadList" xml:space="preserve">
+    <value>Жүктелетін тізім</value>
+  </data>
+  <data name="ApproveMessage" xml:space="preserve">
+    <value>Сіз шынымен бекіткіңіз келе ме?</value>
+  </data>
+  <data name="UnapproveMessage" xml:space="preserve">
+    <value>Сіз шын мәнінде қайтарғыңыз келе ме?</value>
+  </data>
+  <data name="ToForm" xml:space="preserve">
+    <value>Қалыптастыру</value>
+  </data>
+  <data name="SendNotification" xml:space="preserve">
+    <value>Хабарлама жіберу</value>
+  </data>
+  <data name="SendEmailMessageButton" xml:space="preserve">
+    <value>Клиентке хабарлама жіберу</value>
+  </data>
+  <data name="SendMessageButton" xml:space="preserve">
+    <value>Жіберу</value>
+  </data>
+  <data name="SendStatementToClient" xml:space="preserve">
+    <value>Хабарлама жіберу</value>
+  </data>
+  <data name="SelectOutlookTemplate" xml:space="preserve">
+    <value>Ескерту үлгісін таңдау қажет</value>
+  </data>
+  <data name="EmailOnlyOneClient" xml:space="preserve">
+    <value>Хабарламаны тек бір клиентке жіберуге болады</value>
+  </data>
+  <data name="UnloadListError" xml:space="preserve">
+    <value>Жүктелетін тізімді таңдау қажет</value>
+  </data>
+  <data name="ErrorText" xml:space="preserve">
+    <value>Сұрауды өңдеу кезінде қате шықты, қатенің түсініктемесі әкімшіге оқиғалар жұрналында қол жетімді.</value>
+  </data>
+  <data name="SendSelectedSigners" xml:space="preserve">
+    <value>{0} жазбаларын шынымен жібергіңіз келе ме?</value>
+  </data>
+  <data name="SelectSigners" xml:space="preserve">
+    <value>Қол қоюшыларды таңдау қажет</value>
+  </data>
+  <data name="EmailMessageSendedAlert" xml:space="preserve">
+    <value>&lt;р&gt;{0} клиенттері таңдалды. &lt;br/&gt; Адресаттарға жеткізілді: {1} &lt;br/&gt; He жеткізілді: {2}&lt;/p &gt;</value>
+  </data>
+  <data name="SelectEditTemplate" xml:space="preserve">
+    <value>Үлгіні таңдау қажет</value>
+  </data>
+  <data name="SelectOneEditTemplate" xml:space="preserve">
+    <value>Бір үлгіні таңдау қажет</value>
+  </data>
+  <data name="UploadTemplate" xml:space="preserve">
+    <value>Жаңа үлгіні жүктеу</value>
+  </data>
+  <data name="CantFindTemplate" xml:space="preserve">
+    <value>Үлгіні табу мүмкін болмады</value>
+  </data>
+  <data name="Approve" xml:space="preserve">
+    <value>Бекіту</value>
+  </data>
+  <data name="UnApprove" xml:space="preserve">
+    <value>Қисайту</value>
+  </data>
+  <data name="EditManager" xml:space="preserve">
+    <value>Менеджерлерді өңдеу</value>
+  </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>Күшін жою</value>
+  </data>
+  <data name="RequiredFieldValidationError" xml:space="preserve">
+    <value>'{0}' өрісі толтыру үшін міндетті</value>
+  </data>
+  <data name="DownloadTemplate" xml:space="preserve">
+    <value>Үлгіні жүктеу</value>
+  </data>
+  <data name="Edit" xml:space="preserve">
+    <value>Өзгерту</value>
+  </data>
+  <data name="ClientFormLog" xml:space="preserve">
+    <value>Хабарламалар журналы</value>
+  </data>
+  <data name="Base" xml:space="preserve">
+    <value>BaseId</value>
+  </data>
+  <data name="ClientName" xml:space="preserve">
+    <value>Клиент</value>
+  </data>
+  <data name="EmailNotFound" xml:space="preserve">
+    <value>Клиенттің email мекенжайы жоқ</value>
+  </data>
+  <data name="ErrorSended" xml:space="preserve">
+    <value>Жіберілген жоқ, әкімшіге хабарласыңыз</value>
+  </data>
+  <data name="Sended" xml:space="preserve">
+    <value>Жiберiлген</value>
+  </data>
+  <data name="Status" xml:space="preserve">
+    <value>Мәртебе</value>
+  </data>
+  <data name="SignersModuleAlert" xml:space="preserve">
+    <value>Хабарламалар бойынша есеп</value>
+  </data>
+  <data name="BankAccounts" xml:space="preserve">
+    <value>клиенттің шоттары</value>
+  </data>
+  <data name="ClientsContact" xml:space="preserve">
+    <value>Клиент контактісі</value>
+  </data>
+  <data name="ClientsMpp" xml:space="preserve">
+    <value>Клиент бойынша MPP</value>
+  </data>
+  <data name="Signatories" xml:space="preserve">
+    <value>Қол қоюшылар</value>
+  </data>
+  <data name="CantConvertToXlsxUploadXslx" xml:space="preserve">
+    <value>xls, xlsx- ке түрлендірілмеді, файлды xlsx пішімінде жүктеңіз</value>
+  </data>
+  <data name="Email" xml:space="preserve">
+    <value>Электрондық поштаға хабар жіберу</value>
+  </data>
+  <data name="FilterByQuasiPublicSectorFalse" xml:space="preserve">
+    <value>Квазигос.сектор субъектілерін көрсету</value>
+  </data>
+  <data name="FilterByQuasiPublicSectorTrue" xml:space="preserve">
+    <value>Квазимемлекеттік сектор субъектісі</value>
+  </data>
+  <data name="UploadOKED" xml:space="preserve">
+    <value>Файлды қотару ЭҚЖК</value>
+  </data>
+  <data name="UploadClientsExcel" xml:space="preserve">
+    <value>"Клиенттер" қотару</value>
+  </data>
+  <data name="UploadOKEDExcel" xml:space="preserve">
+    <value>"Клиенттің ЭҚЖК" қотару</value>
+  </data>
+  <data name="CurrencyVolumeNotFound" xml:space="preserve">
+    <value>Валютаны сату көлемінің өзекті қолданылу мерзімі табылмады. Анықтамалықта мерзімін көрсетіңіз</value>
+  </data>
+  <data name="FilterByGoodsPreCheckTrue" xml:space="preserve">
+    <value>қосымша тексеру</value>
+  </data>
+  <data name="FilterByGoodsPreCheckFalse" xml:space="preserve">
+    <value>Клиенттерді қосу арқылы көрсетіңіз. тексеру</value>
+  </data>
+  <data name="ChooseAmlMessageCode" xml:space="preserve">
+    <value>AML-ге хабарлама жіберу негізін таңдау</value>
+  </data>
+  <data name="DiffRefsAlert" xml:space="preserve">
+    <value>Жіберу мүмкін емес: 1-ден көп клиентке қатысты жазбалар таңдалды!</value>
+  </data>
+</root>

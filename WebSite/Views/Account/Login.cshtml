@@ -1,0 +1,85 @@
+﻿@using Newtonsoft.Json
+@using WebSite.Models
+@using WebSite.Properties
+@model LoginViewModel
+@{
+    ViewBag.Title = AccountResources.LoginTitle;
+    var noLayout = (bool) ViewBag.DeferredNoLayout;
+    if (noLayout)
+    {
+        Layout = "~/Views/Shared/_DeferredNoLayout.cshtml";
+    }
+}
+
+<div id="loginWindow" style="display: none">
+    @using (Html.BeginForm("Login", "Account", FormMethod.Post, new { @class = "form-horizontal" }))
+    {
+        @Html.AntiForgeryToken()
+        <dl>
+            <dt>@Html.LabelFor(m => m.UserName)</dt>
+            <dd>
+                @Html.EditorFor(m => m.UserName)
+                @Html.ValidationMessageFor(m => m.UserName)
+            </dd>
+            <dt>@Html.LabelFor(m => m.Password)</dt>
+            <dd>
+                @Html.EditorFor(m => m.Password)
+                @Html.ValidationMessageFor(m => m.Password)
+            </dd>
+        </dl>
+        <div>
+            <a url="#" class="k-button k-button-icontext k-primary" style="width: 100%">
+                <span class="fas fa-sign-in-alt"></span>
+                @AccountResources.LoginButtonTitle
+            </a>
+        </div>
+    }
+</div>
+
+@section Scripts {
+    <script>
+        kendo.syncReady(function() {
+            var w = $('#loginWindow').kendoWindow({
+                title: '@ViewBag.Title',
+                width: 300,
+                modal: @noLayout.ToString().ToLower(),
+                actions: [],
+                draggable: false,
+                resizable: false
+            }).data('kendoWindow');
+            w.open();
+            w.center();
+            var v = w.element.kendoValidator().data('kendoValidator');
+            var button = w.element.find('.k-button').click(function() {
+                if (v.validate()) {
+                    kendo.ui.progress(w.element, true);
+                    $.ajax({
+                            url: '/Account/Login',
+                            type: 'POST',
+                            data: $('form').serialize()
+                        })
+                        .done(function(result) {
+                            kendo.ui.progress(w.element, false);
+                            if (result.error)
+                                kendo.alert('<div style="max-width: 900px;max-height:600px;">' + result.error + '</div>');
+                            else if (result.success) {
+                                var accountLogin = '/account/login';
+                                if (location.pathname.substr(0, accountLogin.length).toLowerCase() === accountLogin)
+                                    location.href = @Html.Raw(JsonConvert.SerializeObject((string)ViewBag.ReturnUrl));
+                                else
+                                    w.destroy();
+                            }
+                        }).fail(function(e) {
+                            kendo.ui.progress(w.element, false);
+                            errorHandler(e);
+                        });
+                }
+            });
+
+            $(w.element).keypress(function(e) {
+                if (e.which === 13) button.click();
+            });
+        });
+
+    </script>
+}

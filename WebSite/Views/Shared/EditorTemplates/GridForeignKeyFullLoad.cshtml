@@ -1,0 +1,34 @@
+﻿@using System
+@using System.Linq
+@using Nat.Web.Core.Resources
+@using Kendo.Mvc.UI.Fluent
+@using Nat.Web.Core.Kendo.Extensions
+@using Nat.Web.Core.System.Annotations
+@using Nat.Web.Core.System.Extensions
+@using Newtonsoft.Json
+@model object
+@{
+    WidgetFactory<Object> kendo = Html.Kendo();
+    var settings = ViewData.ModelMetadata.GetPropertyAttr<ForeignKeyAttribute>();
+    var title = ViewData.ModelMetadata.GetPropertyAttr<TitleAttribute>()?.GetTitle() ?? "";
+    var json = settings.GetOptionsJson(ViewData);
+    var dropdown = kendo.DropDownListFor(m => m)
+        .ValuePrimitive(true)
+        .OptionLabel(SharedResources.SNotSelected)
+        .InitForeignKey(settings, json)
+        .DataSource(ds => ds.InitForeignKey(settings, json))
+        .HtmlAttributes(new
+        {
+            style = "width:100%",
+            title,
+            @class = (string)ViewData["class"] ?? ""
+        })
+        .AutoWidth(true);
+
+    if ((bool?) ViewBag.EditorTemplateDeferred == true)
+    {
+        dropdown.Deferred();
+    }
+}
+
+@dropdown

@@ -1,0 +1,18 @@
+﻿@using System.Collections
+@using System.Linq
+@using Nat.Web.Core.Resources
+@using Nat.Web.Core.System.Annotations
+@using Nat.Web.Core.System.Extensions
+@model object
+@{
+    var settings = ViewData.ModelMetadata.GetPropertyAttr<ForeignKeyAttribute>();
+    var title = ViewData.ModelMetadata.GetPropertyAttr<TitleAttribute>()?.GetTitle() ?? "";
+    var @class = (string)ViewData["class"] ?? "";
+}
+@(Html.Kendo().DropDownListFor(m => m)
+    .BindTo((IEnumerable)ViewData[ViewData.TemplateInfo.GetFullHtmlFieldName("") + "_" + settings.ControllerName + "_Data"])
+    .ValuePrimitive(true)
+    .DataTextField(settings.DataTextField)
+    .DataValueField(settings.DataValueField)
+    .HtmlAttributes(new { style = "width:100%", title, @class })
+)

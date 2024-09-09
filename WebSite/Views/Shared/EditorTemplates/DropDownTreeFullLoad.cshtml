@@ -1,0 +1,53 @@
+﻿@using System
+@using System.Linq
+@using Nat.Web.Core.Resources
+@using Kendo.Mvc.UI.Fluent
+@using Nat.Web.Core.System.Annotations
+@model object
+@{
+    WidgetFactory<Object> kendo = Html.Kendo();
+    var settings = ViewData.ModelMetadata.ContainerType
+        .GetProperty(ViewData.ModelMetadata.PropertyName)
+        .GetCustomAttributes(typeof(ForeignKeyAttribute), false)
+        .OfType<ForeignKeyAttribute>()
+        .First();
+    var titleAttr = ViewData.ModelMetadata.ContainerType
+        .GetProperty(ViewData.ModelMetadata.PropertyName)
+        .GetCustomAttributes(typeof(TitleAttribute), false)
+        .OfType<TitleAttribute>()
+        .FirstOrDefault();
+
+    var textField = settings.DataTextField;
+    var modeTextField = settings.ModelDataTextField;
+    string gridName;
+    if (ViewData.ModelState.ContainsKey("GridName") && !string.IsNullOrEmpty(ViewData.ModelState["GridName"].Value.AttemptedValue))
+    {
+        gridName = ViewData.ModelState["GridName"].Value.AttemptedValue;
+    }
+    else if (ViewData.ContainsKey("GridName") && !string.IsNullOrEmpty((string)ViewData["GridName"]))
+    {
+        gridName = (string)ViewData["GridName"];
+    }
+    else
+    {
+        gridName = "grid";
+    }
+
+    var getEditable = $"DetectEditable('{gridName}', '{ViewData.TemplateInfo.GetFullHtmlFieldName("")}')";
+    var selectEvent = $"function(e) {{ var textValue = e.dataItem == null ? '{SharedResources.SNotSelected}' : e.dataItem['{textField}']; {getEditable}.options.model.{modeTextField} = textValue; }}";
+    var readEvent = $"function(e) {{ var editable = {getEditable}; if (!editable) return {{}}; return {{ selectionModelMember: '{ViewData.TemplateInfo.GetFullHtmlFieldName("")}', selectionModelType: '{ViewData.ModelMetadata.ContainerType.AssemblyQualifiedName}', selectionModelJson: JSON.stringify(editable ? editable.options.model.toJSON() : {{}}) }}; }}";
+}
+
+@(kendo.DropDownTreeFor(m => m)
+    .ValuePrimitive(true)
+    .Placeholder(SharedResources.SNotSelected)
+    .DataTextField(settings.DataTextField)
+    .DataValueField(settings.DataValueField)
+    .DataSource(ds => ds
+        .Custom()
+        .Type("aspnetmvc-ajax")
+        .Transport(t => t.Read(r => r.Action(settings.ActionName, settings.ControllerName, new { area = settings.AreaName })
+                         .Data(readEvent)))
+        .Schema(schema => schema.Data("Data").Total("Total")))
+    .HtmlAttributes(new { style = "width:100%", title = titleAttr == null ? string.Empty : titleAttr.GetTitle() })
+    .Events(e => e.Select(selectEvent)))

@@ -1,0 +1,48 @@
+{
+	//ConnectionString: 'Server=172.17.163.119;Database=mcc-develop;User ID=sa;Password=1q2w3e$R',
+	ConnectionString: 'Data Source=.\\mssql;Initial Catalog=mcc;Integrated Security=True',
+	Tables: [{
+		TableLike: 'DIC_%',
+		TableLikeNotIn: ['DIC_BankAccountTypes', 'DIC_Countries', 'DIC_Currencies', 'DIC_Clients', 'DIC_BankDivisions', 'DIC_PaymentCancelationCause'],
+		CodeColumn: 'Code',
+		DefaultNameColumn: 'NameRu',
+		TranslateNameColumns: ['NameKz|kk-KZ', 'NameEn|en-US']
+	}, {
+		TableLike: 'DIC_%',
+		//TableName: 'DIC_ContractCloseCauses',
+		CodeColumn: 'Code',
+		DefaultNameColumn: 'FullNameRu',
+		TranslateNameColumns: ['FullNameKz|kk-KZ', 'FullNameEn|en-US']
+	}, {
+		TableLike: 'DIC_%',
+		//TableName: 'DIC_LegalTypes',
+		CodeColumn: 'Code',
+		DefaultNameColumn: 'ShortNameRu',
+		TranslateNameColumns: ['ShortNameKz|kk-KZ', 'ShortNameEn|en-US']
+	}, {
+		TableName: 'DIC_PaymentCancelationCause',
+		CodeColumn: 'Code',
+		DefaultNameColumn: 'NameEn',
+		TranslateNameColumns: ['NameKz|kk-KZ', 'NameRu|ru-RU']
+	}, {
+		TableName: 'DIC_RequirementsOfAFR',
+		CodeColumn: 'Code',
+		DefaultNameColumn: 'MessageRu',
+		TranslateNameColumns: ['MessageKz|kk-KZ', 'MessageEn|en-US']
+	}/*, {
+		TableName: 'DIC_Countries',
+		CodeColumn: 'Code2Char',
+		DefaultNameColumn: 'FullNameRu',
+		TranslateNameColumns: ['FullNameKz|kk-KZ', 'FullNameEn|en-US']
+	}, {
+		TableName: 'DIC_Countries',
+		CodeColumn: 'Code2Char',
+		DefaultNameColumn: 'ShortNameRu',
+		TranslateNameColumns: ['ShortNameKz|kk-KZ', 'ShortNameEn|en-US']
+	}, {
+		TableName: 'DIC_Currencies',
+		CodeColumn: 'Code3Char',
+		DefaultNameColumn: 'NameRu',
+		TranslateNameColumns: ['NameKz|kk-KZ', 'NameEn|en-US']
+	}*/]
+}

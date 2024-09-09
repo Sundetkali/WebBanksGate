@@ -1,0 +1,24 @@
+﻿@using System.ComponentModel.DataAnnotations
+@using System.Linq
+@using Nat.Web.Core.System.Annotations
+@model object 
+@{
+    var settings = ViewData.ModelMetadata.ContainerType
+        .GetProperty(ViewData.ModelMetadata.PropertyName)
+        .GetCustomAttributes(typeof(DisplayFormatAttribute), false)
+        .OfType<DisplayFormatAttribute>()
+        .FirstOrDefault();
+    var titleAttr = ViewData.ModelMetadata.ContainerType
+        .GetProperty(ViewData.ModelMetadata.PropertyName)
+        .GetCustomAttributes(typeof(TitleAttribute), false)
+        .OfType<TitleAttribute>()
+        .FirstOrDefault();
+    var description = ViewData.ModelMetadata.Description != ViewData.ModelMetadata.DisplayName ? ViewData.ModelMetadata.Description : "";
+}
+@(Html.TextBoxFor(model => model, new
+{
+    style = "width:100%",
+    @class = "m-field-readOnly k-textbox",
+    @readonly = "readonly",
+    title = titleAttr == null ? description : titleAttr.GetTitle()
+}))

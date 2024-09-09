@@ -1,0 +1,13 @@
+﻿@using WebSite.Properties
+@{
+    ViewBag.Title = Resources.ErrorTitle;
+    Layout = null;
+    var message = (string)ViewBag.Message;
+}
+
+<h1 class="text-danger">@Resources.ErrorTitle</h1>
+<h2 class="text-danger">@Resources.ErrorText</h2>
+@if (!string.IsNullOrEmpty(message))
+{
+<h3>@message</h3>
+}

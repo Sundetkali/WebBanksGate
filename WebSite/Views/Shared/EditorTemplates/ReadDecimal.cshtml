@@ -1,0 +1,18 @@
+@using System.ComponentModel.DataAnnotations
+@model decimal?
+@{
+    var attr = ViewData.ModelMetadata.ContainerType.GetProperty(ViewData.ModelMetadata.PropertyName)
+        .GetCustomAttributes(typeof(RangeAttribute), false)
+        .OfType<RangeAttribute>()
+        .FirstOrDefault();
+    var decimals = attr == null ? 2 : BitConverter.GetBytes(decimal.GetBits(Convert.ToDecimal(attr.Maximum))[3])[2];
+}
+@(Html.Kendo().NumericTextBoxFor(m => m)
+    .HtmlAttributes(new { style="width:100%", @class="m-field-readOnly", @readonly = "readonly" })
+    .Decimals(decimals)
+    .Format(ViewData.ModelMetadata.DisplayFormatString)
+    .Min(attr == null ? decimal.MinValue : Convert.ToDecimal(attr.Minimum))
+    .Max(attr == null ? decimal.MaxValue : Convert.ToDecimal(attr.Maximum))
+)
+
+

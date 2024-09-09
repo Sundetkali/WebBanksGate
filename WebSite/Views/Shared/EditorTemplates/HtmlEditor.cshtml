@@ -1,0 +1,59 @@
+@using Nat.Web.Core.Kendo.Extensions
+@using WebSite.Properties
+@model string
+
+@(Html.Kendo().EditorFor(m => m)
+      .Messages(m =>
+      {
+          m.InsertImage(Resources.SInsertImage);
+          m.InsertFile(Resources.SInsertFile);
+      })
+      .Tools(tools => tools
+          .Clear()
+          .CustomButton(c => c.Name("ctrlZ").ToolTip(Resources.SUndo).Exec("function(e){ $(this).data('kendoEditor').exec('undo'); }"))
+          .CustomButton(c => c.Name("ctrlY").ToolTip(Resources.SRedo).Exec("function(e){ $(this).data('kendoEditor').exec('redo'); }"))
+          .FontName()
+          .FontSize()
+          .Bold().Italic().Underline().Strikethrough()
+          .JustifyLeft().JustifyCenter().JustifyRight().JustifyFull()
+          .InsertUnorderedList().InsertOrderedList()
+          .Outdent().Indent()
+          .InsertImage().InsertFile()
+          .CreateLink().Unlink()
+          //.CustomButton(c => c.Name("mediaManager").ToolTip(Resources.SConvertLinkToVideo).Exec("function(e){ VM.convertToVideo(e); }"))
+          .SubScript()
+          .SuperScript()
+          .TableEditing()
+          .FontColor().BackColor()
+          .Formatting(c => c.Add(Resources.SParagraph, "p")
+              .Add(Resources.SQuotation, "blockquote")
+              .Add(Resources.SHeading1, "h1")
+              .Add(Resources.SHeading2, "h2")
+              .Add(Resources.SHeading3, "h3")
+              .Add(Resources.SHeading4, "h4")
+              .Add(Resources.SHeading5, "h5")
+              .Add(Resources.SHeading6, "h6"))
+          .CustomTemplate(c => c.Template("#= Nat.F.GetHtmlEditorMarginTemplate('toolMarginTop', '" + Resources.SMarginTop + "') #"))
+          .CustomTemplate(c => c.Template("#= Nat.F.GetHtmlEditorMarginTemplate('toolMarginBottom', '" + Resources.SMarginBottom + "') #"))
+          .CleanFormatting()
+          .FormatPainter()
+          .ViewHtml()
+    )
+      /*.ImageBrowser(imageBrowser => imageBrowser
+                                        .Image("~/Content/UserFiles/Images/{0}")
+                                        .Read("Read", "ImageBrowser")
+                                        .Create("Create", "ImageBrowser")
+                                        .Destroy("Destroy", "ImageBrowser")
+                                        .Upload("Upload", "ImageBrowser")
+                                        .Thumbnail("Thumbnail", "ImageBrowser")
+                                        .FileTypes("*.jpg,*.jpeg,*.png,*.gif"))
+      .FileBrowser(fileBrowser => fileBrowser
+                                      .File("~/Content/UserFiles/Files/{0}")
+                                      .Read("Read", "FileBrowser")
+                                      .Create("Create", "FileBrowser")
+                                      .Destroy("Destroy", "FileBrowser")
+                                      .Upload("Upload", "FileBrowser")
+                                      .FileTypes("*.rar,*.zip,*.doc,*.docx,*.xls,*.xslx,*.pdf,*.ppt,*.pptx,*.mp4")
+      )*/
+    .HtmlAttributes(new {style="height: 400px;"})
+    .Deferred((bool?) ViewBag.EditorTemplateDeferred ?? false))
